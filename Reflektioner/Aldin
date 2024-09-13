@@ -22,4 +22,10 @@ Master:
         -rasmus branch
         -adams branch
 
-Updaters node till senaste version genom nvm install node
+Updatera node till senaste version genom nvm install node.
+
+
+Skapa en simpel server med express.
+
+Avvek lite från branch planen med att döpa min branch till server.
+
