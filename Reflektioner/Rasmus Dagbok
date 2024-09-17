@@ -1,8 +1,12 @@
 2024-09-06:
 
-vi möttes upp och planerade vad vi skulle göra. vi bestämde oss för att använda javascript och react.js framework och node.js
+We met up and planned what to do. We decided to use javascript and react.js framework as well as node.js
 2024-09-09:
-Vi skulle ha möte, men eftersom Aldin var sjuk och adam var försenad, så bestämde vi oss att skjuta på det. Dock sammanställde jag instruktionerna och lade upp dem i en flowchart för att göra dem lättare att förstå.
+We were supposed to have a meeting, however since Aldin was sick and Adam was late, we decided to delay it, I did however write 
+the instructions in a flowchart and sent it in our discord server to make it easier to know what needed to be done.
 
 2024-09-13
-Vi hade digitalt möte eftersom flera var sjuka. Vi bestämde att jag Aldin och Håwk är backend (generellt), Noah och Daniel är frontend
+We had a digital meeting since many were sick. We decided me, Aldin and Håwk are backend (generally), and Noah and Daniel are frontend
+
+2024-09-17
+We found out we're not supposed to use react.js framework, so we will only be using nodejs for this project.
