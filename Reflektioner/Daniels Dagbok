@@ -1,3 +1,13 @@
 18-09-24
 --------
 Har börjat försöka lära mig lite Node.js. Om detta har kommit upp på git har jag även lyckats med det.
+--------
+20-09-24
+--------
+Har gjort lite på server.js och commitat det. Ändringarna jag gjort rörde b.la olika routes i hemsidan som
+/burger osv. för senare bearbetning. Ska kolla lite mer på node.js och försöka lära mig lite extra.
+Måste tänka på hur vi ska använda databasen till att lägga till olika options till de olika routerna. Därefter
+så ska vi lyckas skicka från /checkout/ genom en knapp till /checkout/send/, som då skickar allting från checkout till 
+kitchenview.
+I själva checkout så ska man kunna lägga till antal utöver att trycka på burgaren flera gånger, och att kunna ta bort antal
+som man ångrat. 
