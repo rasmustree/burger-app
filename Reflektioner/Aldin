@@ -4,30 +4,24 @@ Vi kom fram till att vi skulle använda oss av vs code, node.js och react för f
 
 09-13:
 
-Vi dela upp vem som ska jobba med vad.
+We assigned roles to each member in the team
 Aldin: backend
 Rasmus: backend
 Adam: backend
 Noah: frontend
 Daniel: frontend
 
-Vi har delat planerat att att dela upp det i olika branches:
+Updated node to latest version.
 
-Master:
-    -frontend:
-        -noahs branch
-        -daniels branch
-    -backend:
-        -aldins branch
-        -rasmus branch
-        -adams branch
-
-Updatera node till senaste version genom nvm install node.
+I created a simple server using node and express.
 
 
-Skapa en simpel server med express.
+Merge between server and main branch.
 
-Avvek lite från branch planen med att döpa min branch till server.
+09/26:
 
-Merge mellan server och main. Fick problem då denna logbok var fylld i server men tom i main.
-Löste med att kopiera innehållet, ta bort innehållet från server branchen och sedan klistra in allt i main branchen
+Since I last wrote in this diary we decided as a team to not use react and just use standard JavaScript and HTML, since react did not seem appropriate for this assignment, since we are not supposed to make a fancy program with a lot of bells and whistles.
+
+
+
+
