@@ -1,13 +1,16 @@
 18-09-24
 --------
-Har börjat försöka lära mig lite Node.js. Om detta har kommit upp på git har jag även lyckats med det.
+Have started to learn a little Node.js. If you can read this it means ive succesfully used git too
 --------
 20-09-24
 --------
-Har gjort lite på server.js och commitat det. Ändringarna jag gjort rörde b.la olika routes i hemsidan som
-/burger osv. för senare bearbetning. Ska kolla lite mer på node.js och försöka lära mig lite extra.
-Måste tänka på hur vi ska använda databasen till att lägga till olika options till de olika routerna. Därefter
-så ska vi lyckas skicka från /checkout/ genom en knapp till /checkout/send/, som då skickar allting från checkout till 
-kitchenview.
-I själva checkout så ska man kunna lägga till antal utöver att trycka på burgaren flera gånger, och att kunna ta bort antal
-som man ångrat. 
+Have done a little on the file server.js and commitet it. The changes i did affected the different routes in the to-be website.
+An example of an route is /burger etc. to prepare for later changes. I'll look more into node.js and try to learn a little more.
+Have to tink about how we are to use the database to add different options to the different routes. After that we have to be able to 
+have a checkout menu in the route /checkout/, with options to add and remove the different choices and also a /checkout/send/ which
+confirms the order that you've added and sentds it to kitchenview.
+--------
+05-10-24
+--------
+I have changed the language from swedish to english for readability purposes. I'm sick this week (v.40) so I haven't done much
+work. I will hopefully be able to catch up later on. 
