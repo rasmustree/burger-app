@@ -14,4 +14,6 @@ confirms the order that you've added and sentds it to kitchenview.
 --------
 I have changed the language from swedish to english for readability purposes. I'm sick this week (v.40) so I haven't done much
 work. I will hopefully be able to catch up later on. To start working on the actual webapp I need to have access to the database somehow.
-I will figure it out, hopefully, because frankly I have got no idea. 
+I will figure it out, hopefully, because frankly I have got no idea. I've re-read the assignment and it also told me to clarify what "git commands"
+I have used. I haven't, I've been using the github app to commit changes to the important things, while right now I'm using the website to write
+this, as last time I got a merge conflict. I'm gonna continue to use the website for this as it seems the most "smooth". 
