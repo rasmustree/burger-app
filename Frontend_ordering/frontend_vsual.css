@@ -1,1 +1,21 @@
-/* file tow work on the looks of the frontend.
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color:brown;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.logo img{
+    width :200;
+
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+
+}
