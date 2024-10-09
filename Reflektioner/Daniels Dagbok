@@ -25,3 +25,4 @@ website that way. The data should be retrieved, and it should be fetched with a 
 single one of the items and then another function that builds it into clickable (links maybe?). The (links) should lead to a page where you can
 add and remove the ingredients inside it. Once user is happy, it should be added into a checkout, where you can add or remove the items you've added.
 Once the user is happy, the user confirms their order and sends its to kitchenview. Solved my first merge conflict aswell using VS code, couldn't figure it out but now I've succeeded. I've also added a temporary list of burgers before the database is done, just so I can figure out how to make the website work. 
+Helped Adam with using the github desktop application to push, pull and merge from github.com. 
