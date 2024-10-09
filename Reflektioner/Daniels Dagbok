@@ -17,3 +17,11 @@ work. I will hopefully be able to catch up later on. To start working on the act
 I will figure it out, hopefully, because frankly I have got no idea. I've re-read the assignment and it also told me to clarify what "git commands"
 I have used. I haven't, I've been using the github app to commit changes to the important things, while right now I'm using the website to write
 this, as last time I got a merge conflict. I'm gonna continue to use the website for this as it seems the most "smooth". 
+--------
+09-10-24
+--------
+We had a meeting today to figure out what we have to resolve. What I have to focus on is how to retrieve data from the database and build the
+website that way. The data should be retrieved, and it should be fetched with a function. There needs to be a function that adds every
+single one of the items and then another function that builds it into clickable (links maybe?). The (links) should lead to a page where you can
+add and remove the ingredients inside it. Once user is happy, it should be added into a checkout, where you can add or remove the items you've added.
+Once the user is happy, the user confirms their order and sends its to kitchenview. 
