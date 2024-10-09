@@ -1,17 +1,27 @@
 18-09-24
 --------
-Har börjat försöka lära mig lite Node.js. Om detta har kommit upp på git har jag även lyckats med det.
+Have started to learn a little Node.js. If you can read this it means ive succesfully used git too
 --------
 20-09-24
 --------
-Har gjort lite på server.js och commitat det. Ändringarna jag gjort rörde b.la olika routes i hemsidan som
-/burger osv. för senare bearbetning. Ska kolla lite mer på node.js och försöka lära mig lite extra.
-Måste tänka på hur vi ska använda databasen till att lägga till olika options till de olika routerna. Därefter
-så ska vi lyckas skicka från /checkout/ genom en knapp till /checkout/send/, som då skickar allting från checkout till 
-kitchenview.
-I själva checkout så ska man kunna lägga till antal utöver att trycka på burgaren flera gånger, och att kunna ta bort antal
-som man ångrat. 
--------
-26-09-24
--------
-Lägga till recept för hamburgare etc
+Have done a little on the file server.js and commitet it. The changes i did affected the different routes in the to-be website.
+An example of an route is /burger etc. to prepare for later changes. I'll look more into node.js and try to learn a little more.
+Have to tink about how we are to use the database to add different options to the different routes. After that we have to be able to 
+have a checkout menu in the route /checkout/, with options to add and remove the different choices and also a /checkout/send/ which
+confirms the order that you've added and sentds it to kitchenview.
+--------
+05-10-24
+--------
+I have changed the language from swedish to english for readability purposes. I'm sick this week (v.40) so I haven't done much
+work. I will hopefully be able to catch up later on. To start working on the actual webapp I need to have access to the database somehow.
+I will figure it out, hopefully, because frankly I have got no idea. I've re-read the assignment and it also told me to clarify what "git commands"
+I have used. I haven't, I've been using the github app to commit changes to the important things, while right now I'm using the website to write
+this, as last time I got a merge conflict. I'm gonna continue to use the website for this as it seems the most "smooth". 
+--------
+09-10-24
+--------
+We had a meeting today to figure out what we have to resolve. What I have to focus on is how to retrieve data from the database and build the
+website that way. The data should be retrieved, and it should be fetched with a function. There needs to be a function that adds every
+single one of the items and then another function that builds it into clickable (links maybe?). The (links) should lead to a page where you can
+add and remove the ingredients inside it. Once user is happy, it should be added into a checkout, where you can add or remove the items you've added.
+Once the user is happy, the user confirms their order and sends its to kitchenview. 

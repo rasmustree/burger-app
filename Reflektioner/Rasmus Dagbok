@@ -10,3 +10,7 @@ We had a digital meeting since many were sick. We decided me, Aldin and Håwk ar
 
 2024-09-17
 We found out we're not supposed to use react.js framework, so we will only be using nodejs for this project.
+
+2024-10-05
+between now and previous entry, I have been learning about containers and databases, but nothing felt worth a whole entry, so I am mentioning it here.
+with some assistance from a teacher, I set up a containerized database that connected to phpmyadmin which allowed me to fairly easily set up a database after learning the basics.
