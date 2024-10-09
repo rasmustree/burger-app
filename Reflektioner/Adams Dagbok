@@ -1,6 +1,44 @@
-sep 9 1800.
-Ska lära mig react, 3 språk som är bra att kunna är html css och javacript, vi kommer använda främst javascript så antar de är vad jag kommer fokusera på iomed react.
-sep 13 1400
-Vi har pratat om hur vi ska börja med allt arbete, har skapat branches på min dator som jag kan arbeta med
-Vi har även skapat branches i burger appen, medans server skapas av Aldin så ska jag fortsätta lära mig JS
-och försöka se hur man programmerar när man jobbar inom backend. Vet fortfarande inte hur React fungerar. 
+## sep 9 1800
+
+going to learn react, 3 languages that is good to know is html css and javacript, we are going to mostly use javacript so i think that it is what im going to focus on
+besides react
+
+---
+
+## sep 13 1400
+
+We haved talked about all the work we are going to use, i haved made a branch on my computer that i can work on
+We also created branches in the burger app, while Aldin made the server, I will work on javacript
+and try to learn to program within backend. Still dont know how to use react.
+
+---
+
+## okt 9 1400
+
+We had a meeting about what has to be done within the app, i sat at the library and wrote down a couple of things
+
+1. User opens the app
+   front end send the request to fetch the menu
+2. Fetching the menu
+   front end : function starts app which will call menu
+   server: listens for incoming requests on end point api
+3. user orders burger
+   frontend call order id when user clicks to order
+4. Processing order
+   frontend: send a POST request to server at api with burger ID
+   server: Receives request and processes order
+   Database: Server inserts new record into the order table within, 1. burgerID, 2. status "pending"
+   respons: server retirms a confirmation message to frontend
+5. Kitchten view
+   Kitchen view send request to server for order
+   server: listens for request and processes it
+   Database: server queries orders table for records with status
+   respons: server send list of pending orders to kitchen view for "preperation"
+   We also made a document were we listed things that has to be done, in 3 catagories
+   Done, working on it, todo.
+
+---
+
+## okt 9 2325
+
+Downloaded github dekstop with help of danne.
