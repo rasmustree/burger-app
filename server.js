@@ -20,7 +20,8 @@ const Combos = [
 
 const drinks = [
     {name: "Cola"},
-    {name: "Fanta"}
+    {name: "Fanta"},
+    {name: "Sprite"}
 ]
 
 
