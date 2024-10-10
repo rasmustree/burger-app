@@ -34,7 +34,8 @@ works a bit and managed to start the docker file after many errors. I had issues
 changing the config.json in the .docker bin. After a lot of trial and error that was the fix.
 I've also linked Noahs frontend_objects into server.js/items. 
 Another error we've encountered was that the path towards the frontend_object was broken after Aldins work on sorting. The issue was fixed by adding a /../ at the beggining.
-I've removed all the other routes inside the webapp for simpliciy purposes (as seen in history). 
+I've removed all the other routes inside the webapp for simpliciy purposes (as seen in history) which conflicts what i wrote yesterday. That was due to Noah taking the initiative to
+create the HTML and CSS for a combined page of all the items.
 Aldin has work to do on the js side of the html for what the buttons should do. We will have another meeting tomorrow and hopefully it will be just as productive.
 Overall, I am very happy with how its going, and the progress we've all made. Everyone has different levels of experience and qualities and we're all contributing what we can as a team.
 --------
