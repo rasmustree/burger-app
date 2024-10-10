@@ -26,3 +26,15 @@ single one of the items and then another function that builds it into clickable 
 add and remove the ingredients inside it. Once user is happy, it should be added into a checkout, where you can add or remove the items you've added.
 Once the user is happy, the user confirms their order and sends its to kitchenview. Solved my first merge conflict aswell using VS code, couldn't figure it out but now I've succeeded. I've also added a temporary list of burgers before the database is done, just so I can figure out how to make the website work. 
 Helped Adam with using the github desktop application to push, pull and merge from github.com. 
+--------
+09-11-24
+--------
+We had another meeting today at the library. We used this time to get some work with aldin sorting the folders into better places and containerising burgerorderer. I've learned how docker
+works a bit and managed to start the docker file after many errors. I had issues with the exe not being in $PATH and getting authentication errors. It took alot of my time to fix today, by
+changing the config.json in the .docker bin. After a lot of trial and error that was the fix.
+I've also linked Noahs frontend_objects into server.js/items. 
+Another error we've encountered was that the path towards the frontend_object was broken after Aldins work on sorting. The issue was fixed by adding a /../ at the beggining.
+I've removed all the other routes inside the webapp for simpliciy purposes (as seen in history). 
+Aldin has work to do on the js side of the html for what the buttons should do. We will have another meeting tomorrow and hopefully it will be just as productive.
+Overall, I am very happy with how its going, and the progress we've all made. Everyone has different levels of experience and qualities and we're all contributing what we can as a team.
+--------
