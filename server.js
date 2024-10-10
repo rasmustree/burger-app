@@ -18,7 +18,7 @@ const Combos = [
     {name: "20x Nuggets meny"}
 ]
 
-const drinks = [
+const Drinks = [
     {name: "Cola"},
     {name: "Fanta"}
 ]
@@ -44,7 +44,7 @@ app.get('/combos/', (req, res) => {
 app.get('/drinks/', (req, res) => {
     res.send('Here are the drinks');
     console.log('User entered drinks');
-    console.log(drinks)
+    console.log(Drinks)
 })
 
 app.get('/sides/', (req, res) => {
