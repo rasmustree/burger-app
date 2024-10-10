@@ -48,3 +48,8 @@ learned to save to the main branch,
 2. After test and completion merge to main
 3. Only merge small changes at a time
 4. rule of thumb 1-3 files at a time
+
+## okt 10 1400
+
+We got together today and tried to fix so everyone had docker installed on their computer
+I also learned what containers are, kinda, its used for the app to be compatible on multiple devices
