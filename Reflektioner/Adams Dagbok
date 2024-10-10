@@ -53,3 +53,7 @@ learned to save to the main branch,
 
 We got together today and tried to fix so everyone had docker installed on their computer
 I also learned what containers are, kinda, its used for the app to be compatible on multiple devices
+
+## okt 10 2000
+
+When we got together i tried to understand how to install the docker and tried it myself at home, had a few issues that resolved thanks to this thread "https://docs.docker.com/engine/install/ubuntu/#install-docker-engine". after reading the link i understood a few things, Docker and container isnt the same thing, docker is like container but for backend and container is used for front end, the meaning behind them are basicly the same, its for the app to work/look good on any machine/screen size.
