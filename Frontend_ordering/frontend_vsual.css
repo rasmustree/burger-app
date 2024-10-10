@@ -14,8 +14,22 @@
 }
 
 
-header{
+.header{
     display: flex;
     justify-content: space-between;
 
+}
+.header ul{
+    display: flex;
+    align-items: center;
+}
+
+header ul li:hover{
+    color:rgb(148, 49, 234)
+}
+
+.choices{
+    margin: 50;
+    padding: 0 50px;
+    font-size: 15px;
 }
