@@ -60,8 +60,10 @@ app.get('/checkout/', (req, res) => {
 })
 
 app.get('/checkout/confirm/', (req, res) => {
-    // WIP, should send the order to kitchenview
-})
+    const kitchenFilePath = path.join(__dirname, 'Frontend_ordering', 'kitchen_view.html');
+    console.log('User confirmed order, displaying kitchen view');
+    res.sendFile(kitchenFilePath);
+});
 
 app.listen(PORT, () => {
     console.log(`server running at http://localhost:${PORT}`); //startar webserver och lyssnar på anslutningar
