@@ -33,8 +33,6 @@ COPY package*.json ./
 USER root
 RUN npm ci
 
-COPY . .
-
 # Expose the port that the application listens on.
 EXPOSE 8080
 USER node

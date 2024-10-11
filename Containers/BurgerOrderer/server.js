@@ -9,8 +9,9 @@ app.get('/', (req, res) => {
 })
 
 app.get('/items', (req, res) => {
-    const filePath = path.join(__dirname, 'Frontend_ordering', 'frontend_objects.html');
+    const filePath = path.join(__dirname, 'frontend_objects.html');
     console.log('User entered items')
+    console.log('Sending file: ', filePath)
     res.sendFile(filePath)
 })
 
