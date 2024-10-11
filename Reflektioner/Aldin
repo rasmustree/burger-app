@@ -22,6 +22,8 @@ Merge between server and main branch.
 
 Since I last wrote in this diary we decided as a team to not use react and just use standard JavaScript and HTML, since react did not seem appropriate for this assignment, since we are not supposed to make a fancy program with a lot of bells and whistles.
 
+11/26:
 
+I had a problem with docker. Docker couldn't find the correct directory to frontend_objects.html. I tried to copy over the file into docker in the dockerfile. That did not work, Daniel told me to just move the html file into the backend folder so that is what I did. And now at least the program works and we can get some work done.
 
 
