@@ -1,4 +1,5 @@
 const express = require('express'); //import express
+const path = require('path'); //import path-module
 const app = express(); //skapa instans av express
 const PORT = 3000;
 
@@ -60,7 +61,7 @@ app.get('/checkout/', (req, res) => {
 })
 
 app.get('/checkout/confirm/', (req, res) => {
-    const kitchenFilePath = path.join(__dirname, 'Frontend_ordering', 'kitchen_view.html');
+    const kitchenFilePath = path.join(__dirname, 'kitchenview', 'kitchen_view.html');
     console.log('User confirmed order, displaying kitchen view');
     res.sendFile(kitchenFilePath);
 });
