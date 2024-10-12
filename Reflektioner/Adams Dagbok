@@ -58,7 +58,15 @@ I also learned what containers are, kinda, its used for the app to be compatible
 
 When we got together i tried to understand how to install the docker and tried it myself at home, had a few issues that resolved thanks to this thread "https://docs.docker.com/engine/install/ubuntu/#install-docker-engine". after reading the link i understood a few things, Docker and container isnt the same thing, docker is like container but for backend and container is used for front end, the meaning behind them are basicly the same, its for the app to work/look good on any machine/screen size.
 
-
 ## okt 11 1300
 
-Accedently deleted most of my work i did yesterady and got nothing to show for
+Accedently deleted most of my work i did yesterady and got nothing to show for, but danne helped me fix it
+
+## okt 11 1930
+
+Trying to make so i can start the server and see the others work on the website but i keep getting "Error: ENOENT: no such file or directory, stat '/usr/src/app/frontend_ordering/frontend_objects.html'" message
+
+## okt 12 1600
+
+Added change to directory for app.get in server.js
+Tried to add docker files and .yaml to my kitchenview, started the server at port 8082 im getting and "forbidden error" need to search up what that means , as i understand it will still work to connect every port to eacheother but this is what i have done for now.
