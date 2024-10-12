@@ -70,3 +70,8 @@ Trying to make so i can start the server and see the others work on the website 
 
 Added change to directory for app.get in server.js
 Tried to add docker files and .yaml to my kitchenview, started the server at port 8082 im getting and "forbidden error" need to search up what that means , as i understand it will still work to connect every port to eacheother but this is what i have done for now.
+
+## okt 12 1900
+
+Danne helped me change directory in the kitchen view port from 8000 to 5000
+Changed the docker so it looks similar to the others, and just changed the port, still getting errors for now, but not the same error as before (forbidden error). Added package.json as it will become easier to build the kitchen view when its textbased in node.
