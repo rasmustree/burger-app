@@ -1,17 +1,15 @@
-const express = require('express')
-const app = express()
-const port = 5000
+const express = require('express');
+const path = require('path');
+const app = express();
 
+// Serve the static HTML file
 app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.get('/checkout/confirm/', (req, res) => {
-    const kitchenFilePath = path.join(__dirname, 'kitchenview', 'kitchen_view.html');
-    console.log('User confirmed order, displaying kitchen view');
-    res.sendFile(kitchenFilePath);
+    res.sendFile(path.join(__dirname, 'kitchen_view.html'));  // Adjust path as needed
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+// Set the port from environment variable or default to 5000
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+    console.log(`Kitchenview server running on port ${PORT}`);
+});

@@ -75,3 +75,9 @@ Tried to add docker files and .yaml to my kitchenview, started the server at por
 
 Danne helped me change directory in the kitchen view port from 8000 to 5000
 Changed the docker so it looks similar to the others, and just changed the port, still getting errors for now, but not the same error as before (forbidden error). Added package.json as it will become easier to build the kitchen view when its textbased in node.
+
+## okt 12 2100
+
+Made so kitchen view can be run in port 5000
+had problems with setting up the docker and .yaml, but when i updated
+docker compose up it worked
