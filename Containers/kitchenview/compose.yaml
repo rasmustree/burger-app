@@ -8,4 +8,4 @@ services:
       - "5000:5000" # Expose port 5000 to the host
     environment:
       NODE_ENV: production
-    command: node kitchenview.js # Ensure this points to the correct entry file
+    command: node kitchenview.js
