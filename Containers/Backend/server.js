@@ -20,9 +20,9 @@ app.get('/checkout/', (req, res) => {
 })
 
 app.get('/checkout/confirm/', (req, res) => {
-    const kitchenFilePath = path.join(__dirname, '../kitchenview/kitchen_view.html');  // One level up, then into kitchenview directory
+    const kitchenFilePath = path.join(__dirname, 'kitchenview', 'kitchen_view.html');
     console.log('User confirmed order, displaying kitchen view');
-    res.sendFile(kitchenFilePath);  // Send the kitchen_view.html file
+    res.sendFile(kitchenFilePath);
 });
 
 app.listen(PORT, () => {
