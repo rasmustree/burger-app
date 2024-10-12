@@ -1,15 +1,25 @@
+const readline = require('readline');
 const express = require('express');
-const path = require('path');
 const app = express();
+const PORT = 5000;
 
-// Serve the static HTML file
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'kitchen_view.html'));  // Adjust path as needed
-});
 
-// Set the port from environment variable or default to 5000
-const PORT = process.env.PORT || 5000;
+const orders = [
+  { id: 1, items: ['Bacon Burger', 'Fries'] },
+];
 
+// Function to display orders
+const displayOrders = () => {
+  console.log("\n Kitchen Orders");
+  orders.forEach(order => {
+    console.log(`Order #${order.id}: ${order.items.join(', ')}`);
+  });
+};
+
+// Display the orders
+displayOrders();
+
+// If you need to keep express running for API purposes:
 app.listen(PORT, () => {
-    console.log(`Kitchenview server running on port ${PORT}`);
-});
+  console.log(`server running at http://localhost:${PORT}`); //startar webserver och lyssnar på anslutningar
+})

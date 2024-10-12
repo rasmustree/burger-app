@@ -81,3 +81,7 @@ Changed the docker so it looks similar to the others, and just changed the port,
 Made so kitchen view can be run in port 5000
 had problems with setting up the docker and .yaml, but when i updated
 docker compose up it worked
+
+## okt 12 2320
+
+Realised we didnt need a website for this to work could just do everything in the terminal for the kitchen view atleast. Still not going to deleted the html file, learned from it, and maybe going to need to use the api i added their if thats somthing we are going to use. Just made a simple js file to run at port5000 made sure it looked like server.js
