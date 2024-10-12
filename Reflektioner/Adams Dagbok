@@ -1,6 +1,77 @@
-sep 9 1800.
-Ska lära mig react, 3 språk som är bra att kunna är html css och javacript, vi kommer använda främst javascript så antar de är vad jag kommer fokusera på iomed react.
-sep 13 1400
-Vi har pratat om hur vi ska börja med allt arbete, har skapat branches på min dator som jag kan arbeta med
-Vi har även skapat branches i burger appen, medans server skapas av Aldin så ska jag fortsätta lära mig JS
-och försöka se hur man programmerar när man jobbar inom backend. Vet fortfarande inte hur React fungerar. 
+## sep 9 1800
+
+going to learn react, 3 languages that is good to know is html css and javacript, we are going to mostly use javacript so i think that it is what im going to focus on
+besides react
+
+---
+
+## sep 13 1400
+
+We haved talked about all the work we are going to use, i haved made a branch on my computer that i can work on
+We also created branches in the burger app, while Aldin made the server, I will work on javacript
+and try to learn to program within backend. Still dont know how to use react.
+
+---
+
+## okt 9 1400
+
+We had a meeting about what has to be done within the app, i sat at the library and wrote down a couple of things
+
+1. User opens the app
+   front end send the request to fetch the menu
+2. Fetching the menu
+   front end : function starts app which will call menu
+   server: listens for incoming requests on end point api
+3. user orders burger
+   frontend call order id when user clicks to order
+4. Processing order
+   frontend: send a POST request to server at api with burger ID
+   server: Receives request and processes order
+   Database: Server inserts new record into the order table within, 1. burgerID, 2. status "pending"
+   respons: server retirms a confirmation message to frontend
+5. Kitchten view
+   Kitchen view send request to server for order
+   server: listens for request and processes it
+   Database: server queries orders table for records with status
+   respons: server send list of pending orders to kitchen view for "preperation"
+   We also made a document were we listed things that has to be done, in 3 catagories
+   Done, working on it, todo.
+
+---
+
+## okt 9 2325
+
+Downloaded github dekstop with help of danne.
+learned to save to the main branch,
+
+1. Working inside adam branch
+2. After test and completion merge to main
+3. Only merge small changes at a time
+4. rule of thumb 1-3 files at a time
+
+## okt 10 1400
+
+We got together today and tried to fix so everyone had docker installed on their computer
+I also learned what containers are, kinda, its used for the app to be compatible on multiple devices
+
+## okt 10 2000
+
+When we got together i tried to understand how to install the docker and tried it myself at home, had a few issues that resolved thanks to this thread "https://docs.docker.com/engine/install/ubuntu/#install-docker-engine". after reading the link i understood a few things, Docker and container isnt the same thing, docker is like container but for backend and container is used for front end, the meaning behind them are basicly the same, its for the app to work/look good on any machine/screen size.
+
+## okt 11 1300
+
+Accedently deleted most of my work i did yesterady and got nothing to show for, but danne helped me fix it
+
+## okt 11 1930
+
+Trying to make so i can start the server and see the others work on the website but i keep getting "Error: ENOENT: no such file or directory, stat '/usr/src/app/frontend_ordering/frontend_objects.html'" message
+
+## okt 12 1600
+
+Added change to directory for app.get in server.js
+Tried to add docker files and .yaml to my kitchenview, started the server at port 8082 im getting and "forbidden error" need to search up what that means , as i understand it will still work to connect every port to eacheother but this is what i have done for now.
+
+## okt 12 1900
+
+Danne helped me change directory in the kitchen view port from 8000 to 5000
+Changed the docker so it looks similar to the others, and just changed the port, still getting errors for now, but not the same error as before (forbidden error). Added package.json as it will become easier to build the kitchen view when its textbased in node.
