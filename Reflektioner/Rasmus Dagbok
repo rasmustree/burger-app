@@ -14,3 +14,19 @@ We found out we're not supposed to use react.js framework, so we will only be us
 2024-10-05
 between now and previous entry, I have been learning about containers and databases, but nothing felt worth a whole entry, so I am mentioning it here.
 with some assistance from a teacher, I set up a containerized database that connected to phpmyadmin which allowed me to fairly easily set up a database after learning the basics.
+
+2024-10-09
+we had a meeting to decide who does what and we made a to do doing done in a google doc
+
+2024-10-10
+we had a meeting during the lab session, during which I found out that I couldn't just move the database I had created, so I had to start over from scratch.
+I did not figure out how to do it, but Aldin gave the advice to create it directly in the repository.
+
+2024-10-11
+I could not figure out how to make the database in the repo. First I tried to export an image of the database to it, but I didn't succeed
+
+2024-10-12
+I made a compose file to create a local database in the repo, which worked. I had to figure out how to translate the console commands I previously used
+into compose format, but I succeeded and you could type open the database in the repo.
+The way to do this is to cd burger-app/Containers/backend/MenuStore
+then type docker compose up
