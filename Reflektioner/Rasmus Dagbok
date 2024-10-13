@@ -27,6 +27,6 @@ I could not figure out how to make the database in the repo. First I tried to ex
 
 2024-10-12
 I made a compose file to create a local database in the repo, which worked. I had to figure out how to translate the console commands I previously used
-into compose format, but I succeeded and you could type open the database in the repo.
+into compose format, but I succeeded and you could type open the database in the repo. I did, however need to retype everything in the database.
 The way to do this is to cd burger-app/Containers/backend/MenuStore
 then type docker compose up
