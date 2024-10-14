@@ -6,8 +6,8 @@ const burgers = [
 
 function onStart(){
     for(let i = 0; i < burgers.length; i++ ){
-        for(let j = 0; j < burgers[i].length; j++ ){
-            console.log(burgers[i][j])
-        }
+        var button = document.createElement("button")
+        button.textContent = burgers[i][0]
     }
 }
+

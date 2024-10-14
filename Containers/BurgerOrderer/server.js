@@ -4,7 +4,8 @@ const PORT = 3000;
 const path = require('path')
 
 
-app.use(express.static('public')) //detta måste vara här för att kunna köra frontend_operations.js
+app.use(express.static(path.join(__dirname)));
+
 app.get('/', (req, res) => {
     res.send('Hello World!'); //lyssna på request som görs till URL(localhost:3000)
     console.log('User has entered BurgerOrderer')
