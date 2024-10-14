@@ -32,3 +32,5 @@ I got a merge conflict when trying to merge with main, the problem was that I ha
 I can't get javascript file to work, because of X-Content-Type-Options: nosniff. I have no clue what this is. Pls god help me.
 After a long conversation with chatGPT, I managed to find that the problem was that in the response header the file had content-type: HTML. This meant that the server couldn't find the javascriptfile, and to solve this I had to specify the <script> tag to start with a "/". And to add app.use(express.static(path.join(__dirname))); this line of code to the server.js file. https://expressjs.com/en/starter/static-files.html
 
+I made it so the items page dynamically adds buttons, I'm just waiting on the database. When the buttons are clicked the ingredients of the burger is displayed. Next I'm going to add a button for each item that adds the item to the checkout, and in the checkout page we are planning to add the functionality to remove or add ingredients to the items.
+
