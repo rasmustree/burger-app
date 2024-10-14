@@ -28,4 +28,7 @@ I had a problem with docker. Docker couldn't find the correct directory to front
 
 I got a merge conflict when trying to merge with main, the problem was that I had removed a file in my branch that someone else had merged with main. To solve this I accepted the changes of the file in my branch so as not to disrupt someone else's work. The file that was causing the merge conflict was cheeseburger.html.
 
+11/14:
+I can't get javascript file to work, because of X-Content-Type-Options: nosniff. I have no clue what this is. Pls god help me.
+After a long conversation with chatGPT, I managed to find that the problem was that in the response header the file had content-type: HTML. This meant that the server couldn't find the javascriptfile, and to solve this I had to specify the <script> tag to start with a "/". And to add app.use(express.static(path.join(__dirname))); this line of code to the server.js file. https://expressjs.com/en/starter/static-files.html
 
