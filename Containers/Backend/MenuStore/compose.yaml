@@ -21,6 +21,9 @@ services:
       MYSQL_DATABASE: db
     volumes:
       - ./:/vol
+    build:
+      context: .
+      dockerfile: docker_db
   phpmyadmin:
     image: phpmyadmin
     restart: always
@@ -28,6 +31,7 @@ services:
       - 8080:80
     environment:
       ports: 8080:80
+    
   #app:
   #  build:
   #    context: .
