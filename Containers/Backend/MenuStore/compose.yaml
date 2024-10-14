@@ -20,11 +20,12 @@ services:
       MYSQL_ROOT_PASSWORD: burger
       MYSQL_DATABASE: db
     volumes:
-      - ./:/vol
+      - ./db.sql:/docker-entrypoiont-initdb.d/init.sql
+      #- ./:/vol
     build:
       context: .
       dockerfile: docker_db
-      
+
   phpmyadmin:
     image: phpmyadmin
     restart: always
@@ -32,13 +33,13 @@ services:
       - 8080:80
     environment:
       ports: 8080:80
-    
+
   #app:
   #  build:
   #    context: .
   #    target: final
   #    db:
-  
+
     # If your application exposes a port, uncomment the following lines and change
     # the port numbers as needed. The first number is the host port and the second
     # is the port inside the container.
