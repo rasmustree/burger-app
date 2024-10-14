@@ -1,21 +1,21 @@
 const express = require('express'); //import express
 const app = express(); //skapa instans av express
 const PORT = 3000;
-const path = require('path')
+const path = require('path');
 
 
 app.use(express.static(path.join(__dirname)));
 
 app.get('/', (req, res) => {
     res.send('Hello World!'); //lyssna på request som görs till URL(localhost:3000)
-    console.log('User has entered BurgerOrderer')
+    console.log('User has entered BurgerOrderer');
 })
 
 app.get('/items', (req, res) => {
     const filePath = path.join(__dirname, 'frontend_objects.html');
-    console.log('User entered items')
-    console.log('Sending file: ', filePath)
-    res.sendFile(filePath)
+    console.log('User entered items');
+    console.log('Sending file: ', filePath);
+    res.sendFile(filePath);
 })
 
 app.get('/checkout/', (req, res) => {
