@@ -24,6 +24,7 @@ services:
     build:
       context: .
       dockerfile: docker_db
+      
   phpmyadmin:
     image: phpmyadmin
     restart: always
