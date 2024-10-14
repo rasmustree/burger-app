@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  kitchenview:
+    build:
+      context: .
+    ports:
+      - "5000:5000" # Expose port 5000 to the host
+    environment:
+      NODE_ENV: production
+    command: node kitchenview.js
