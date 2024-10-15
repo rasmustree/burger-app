@@ -85,3 +85,21 @@ docker compose up it worked
 ## okt 12 2320
 
 Realised we didnt need a website for this to work could just do everything in the terminal for the kitchen view atleast. Still not going to deleted the html file, learned from it, and maybe going to need to use the api i added their if thats somthing we are going to use. Just made a simple js file to run at port5000 made sure it looked like server.js
+
+## okt 13 1700
+
+Tried to make a general compose-docker file but it didnt work, kept on getting an error that it couldnt read kitchenview image Dockerfile not found, but it had a dockerfile. so i uploaded what i made for now.
+
+## okt 15 1700
+
+multiple problems happend today, and thanks to Danne i got all of the problems to get fixed, apperantly i had menustore server up on my computer even when i shut down or reseted my pc it was still up but one of these command helped to remove it: "fuser 8080/tcp" "fuser -k 8080/tcp" "kill -9 $(lsof -t -i:8080)". that tooks 2 hours to find the fix and also when i would try to pull the main file then my system would say denied and that everything was deleted, so i just deleted it from my pc and redownloaded it from the github server again.
+
+## okt 15 2300
+
+Tried to go back to the docker system and tried adding a dockerfile, still wouldnt work so now i moved on to the api instead.
+Trying to make an basic api using fetch following this youtube video https://www.youtube.com/watch?v=cuEtnrL9-H0.
+
+## okt 6 0010
+
+Almost crashed everything today, so i just reverted everything back to how it was.
+Learnt how to force shutdown a server, see what server is up by "docker ps -a" learnt how to debug a container by checking "docker ps"
