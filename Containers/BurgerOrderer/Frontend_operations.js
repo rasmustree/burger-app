@@ -4,7 +4,11 @@ const burgers = [
     ["Kycklingburgare", "Bröd", "Kyckling", "Ost", "Sallad", "Ketchup"]
 ]
 const optionsContainer = document.getElementById("options");
-const ingredientsContainer = document.getElementById("ingredients")
+const ingredientsContainer = document.getElementById("ingredients");
+const orderButtonContainer = document.getElementById("orderButton");
+
+selectedBurger = "";
+order = [];
 
 function onStart(){
     for(let i = 0; i < burgers.length; i++ ){
@@ -13,28 +17,34 @@ function onStart(){
         button.addEventListener("click", onItemButtonClick);
         optionsContainer.appendChild(button);
     }
+    var orderButton = document.createElement("button");
+    orderButton.textContent = "Add To Order";
+    orderButton.addEventListener("click", onOrderButtonClick);
+    orderButtonContainer.appendChild(orderButton);
 }
 function onItemButtonClick(e){
     console.log(e.target.textContent + " has been clicked!");
     var ingredientsText = document.createElement("p");
-    let existingParagraph = ingredientsContainer.querySelector("p")
+    let existingParagraph = ingredientsContainer.querySelector("p");
     if(existingParagraph){
-        existingParagraph.remove()
+        existingParagraph.remove();
     }
     for (let i = 0; i < burgers.length; i++) {
         if (burgers[i][0] === e.target.textContent){
+            selectedBurger = burgers[i][0];
             for (let j = 1; j < burgers[i].length; j++) {
-                ingredientsText.innerHTML += `${burgers[i][j]}\n`
+                ingredientsText.innerHTML += `${burgers[i][j]}\n`;
             }
-            var button = document.createElement("button")
-            button.textContent = "Add To Order"
-            button.addEventListener("click", onOrderButtonClick)
             break;
         }
     }
-    ingredientsContainer.appendChild(ingredientsText)
-    ingredientsContainer.appendChild(button)
+    ingredientsContainer.appendChild(ingredientsText);
 }
-function onOrderButtonClick(e){
-    console.log("Order Button Clicked!")
+function onOrderButtonClick(){
+    if(selectedBurger != ""){
+        order.push(selectedBurger);
+    }
+    for(let i = 0; i < order.length; i++){
+        console.log(order[i]);
+    }
 }
