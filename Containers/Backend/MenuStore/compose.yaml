@@ -11,23 +11,29 @@
 
 services:
   db:
-    image: mysql:latest
+    image: mysql:8.3.0
     container_name: MenuStoreContainer
     ports: 
       - 3307:3306
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: burger
+      MYSQL_USER: admin
+      MYSQL_ROOT_PASSWORD: burger1
+      MYSQL_PASSWORD: burger
       MYSQL_DATABASE: db
     volumes:
-      - ./:/vol
+      - mysql_data:/var/lib/mysql
+
   phpmyadmin:
-    image: phpmyadmin
+    image: linuxserver/phpmyadmin
     restart: always
     ports:
-      - 8080:80
-    environment:
-      ports: 8080:80
+      - 8077:80
+
+
+volumes:
+  mysql_data:
+
   #app:
   #  build:
   #    context: .
