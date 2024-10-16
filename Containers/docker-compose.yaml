@@ -1,10 +1,11 @@
-version: "3.8"
-
 services:
   backend:
-    build:
-      context: ./Backend
-      dockerfile: Dockerfile
+    image: node:14 # Use an appropriate base image, like Node.js
+    container_name: backend-container
+    working_dir: /app
+    volumes:
+      - ./Backend:/app
+    command: npm start # Adjust this command according to how the backend runs
     ports:
       - "3000:3000"
     environment:
@@ -14,7 +15,7 @@ services:
 
   frontend:
     build:
-      context: ./BurgerOrderer/Frontend_ordering
+      context: ./BurgerOrderer
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
@@ -37,6 +38,17 @@ services:
       - burger-network
     depends_on:
       - backend
+
+  menustore:
+    image: mysql:latest
+    container_name: MenuStore
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: burger
+      MYSQL_DATABASE: db
+    networks:
+      - burger-network
 
 networks:
   burger-network:
