@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+</head>
+<body>
+    <h1>Your Order</h1>
+    <div id="orderSummary"></div>
+    <button id="confirmButton">Confirm Order</button>
+    <button onclick="goBackToStart()">Go Back to Start</button>
+
+    <script>
+        // Get the ordr saved in localStorage so we can use it now at checkout page.
+        let order = JSON.parse(localStorage.getItem('currentOrder'));
+
+        // Show the item from user ordr in the 'orderSummary' div section.
+        const orderSummaryDiv = document.getElementById('orderSummary');
+        order.forEach(item => {
+            let orderItem = document.createElement('p');
+            orderItem.textContent = `${item.name}`;
+            orderSummaryDiv.appendChild(orderItem);
+        });
+
+        // It sending order to backend for confirm, and after send tell user it confirmed.
+        function confirmOrder() {
+            axios.post('http://localhost:3000/confirm', { burgers: order })
+                .then(response => {
+                    console.log('Order confirmed:', response.data);
+                    alert('Order sent to kichen');
+                })
+                .catch(error => {
+                    console.error('Error confirm order:', error);
+                });
+        }
+
+        // Make confirm button when clicked run confirmOrder, so user click confirm to send.
+        document.getElementById('confirmButton').addEventListener('click', confirmOrder);
+
+        // Take user back to the homepage when he press the "Go Back to Start" buttn.
+        function goBackToStart() {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>
