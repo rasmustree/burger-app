@@ -21,7 +21,14 @@ function onStart(){
     orderButton.textContent = "Add To Order";
     orderButton.addEventListener("click", onOrderButtonClick);
     orderButtonContainer.appendChild(orderButton);
+    
+    // Add checkout button to navigate to checkout page
+    var checkoutButton = document.createElement("button");
+    checkoutButton.textContent = "Checkout";
+    checkoutButton.addEventListener("click", onCheckout);
+    orderButtonContainer.appendChild(checkoutButton);
 }
+
 function onItemButtonClick(e){
     console.log(e.target.textContent + " has been clicked!");
     var ingredientsText = document.createElement("p");
@@ -40,6 +47,7 @@ function onItemButtonClick(e){
     }
     ingredientsContainer.appendChild(ingredientsText);
 }
+
 function onOrderButtonClick(){
     if(selectedBurger != ""){
         order.push(selectedBurger);
@@ -47,4 +55,12 @@ function onOrderButtonClick(){
     for(let i = 0; i < order.length; i++){
         console.log(order[i]);
     }
+}
+
+// Add function to handle checkout navigation
+function onCheckout() {
+    // Save the current order to localStorage for use in the checkout page
+    localStorage.setItem('order', JSON.stringify(order));
+    // Navigate to the checkout page
+    window.location.href = '/checkout.html';
 }

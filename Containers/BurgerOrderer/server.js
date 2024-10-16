@@ -24,11 +24,12 @@ app.get('/checkout/', (req, res) => {
     console.log('User entered checkout');
 })
 
-app.get('/checkout/confirm/', (req, res) => {
-    const kitchenFilePath = path.join(__dirname, 'kitchenview', 'kitchen_view.html');
-    console.log('User confirmed order, displaying kitchen view');
-    res.sendFile(kitchenFilePath);
+app.post('/checkout/confirm', (req, res) => {
+    const order = req.body; 
+    console.log('Order confirmed, sending to kitchen view:', order);
+    res.json({ message: 'Order confirmed and sent to the kitchen view' });
 });
+
 
 app.listen(PORT, () => {
     console.log(`server running at http://localhost:${PORT}`); //startar webserver och lyssnar på anslutningar

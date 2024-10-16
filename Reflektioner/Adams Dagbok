@@ -111,3 +111,9 @@ Downloaded alot of npm files, wrote npm install, npm install axios, npm install 
 ## okt 16 0000
 
 Saw that the surver could run at port 3000 so i changed in the container compose.yaml file that its is externally 8080 and internally 3000 and it worked. another error i would get is that the menustore wont open, but danne told me they didnt need it so i removed it and that worked too.
+
+## okt 17 0130
+
+Added a checkout.html file that should take the order and added the confirm so it matches the server.js and sends the order too kitchenview, made it easier to go back to the start page by just adding a button that would make so it send the user back to the start. removed the button in fronend_objects.html
+Changed kitchenview to easier take orders, it doesnt work rightnow.
+changed the frontend so it should save the order by using localstorage following this https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem. doesnt really work right now
