@@ -30,3 +30,14 @@ I made a compose file to create a local database in the repo, which worked. I ha
 into compose format, but I succeeded and you could type open the database in the repo. I did, however need to retype everything in the database.
 The way to do this is to cd burger-app/Containers/backend/MenuStore
 then type docker compose up
+
+2024-10-14
+The former method did create a database, however it was empty. I ended up creating an SQL dump of the database and tried to figure out how start the database using this. I didn't figure it out
+also after building the compose, the database suddenly stopped working. It was constantly restarting and I couldn't find out why. there was no difference even if I commented out the entire dockerfile
+the phpmyadmin part was working, but not the database. Since I got too excited and committed to main, I can't access the working version.
+
+2024-10-15
+continued trying ways to fix it. didn't find one
+
+2024-10-16
+
