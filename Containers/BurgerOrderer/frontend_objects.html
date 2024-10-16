@@ -10,51 +10,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burger ordering | Home</title>
 </head>
-<body>
+<body onload="onStart()">
     <header>
         <div class = "logo">
-            <img src="./imeges/Loggo burger application.png" alt="">
+            <img src="/images/Loggo burger application.png" alt="">
         </div>
-        <div class ="ordering">
-            <i calss= "fa-solid fa-bars"></i>
-            <div class =  "choices">
-                <button class ="btn_Cheeseburger"> 
-                    Cheeseburger 
-                    <i class = "fa-solid"></i>
-                </button>
-                <button class = "btn_Chickenburger">
-                    Chickenburger
-                    <i class = "fa-solid"></i>
-                </button>
-                <button class ="btn_Bacon_Cheeseburger">
-                    Bacon Cheeseburger
-                    <i class = "fa-solid"></i>
-                        
-                </button>
-                <button class ="btn_Bacon_Chickenburger">
-                    Bacon Chickenburger
-                    <i class = "fa-solid"></i>
-                </button>
-                <button class ="btn_Dubble_Bacon_CheeseBurger">
-                    Dubble Bacon CheeseBurger
-                    <i class = "fa-solid"></i>
-                </button>
-                
-                <button class ="btn_Dubble_Bacon_Chickenburger">
-                    Dubble Bacon Chickenburger
-                    <i class = "fa-solid"></i>
-                </button>
-                <button class = "btn_nuggets">
-                    Nuggets
-                    <i class = "fa-solid"></i>
-                </button>
-                <a href="http://localhost:8080/checkout">
-                    <button>Checkout</button>
-                </a>
-            </div>
+        <div>
+            <a href="http://localhost:8080/checkout">
+                <button>Checkout</button>
+            </a>
+        </div>
+        <div id="options">
+        </div>
+        <div id="ingredients">
+        </div>
+        <div id="orderButton">
         </div>
     </div>
-
     </header>
     <script src="Frontend_operations.js"></script>
 </body>
