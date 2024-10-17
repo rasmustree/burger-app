@@ -117,3 +117,11 @@ Saw that the surver could run at port 3000 so i changed in the container compose
 Added a checkout.html file that should take the order and added the confirm so it matches the server.js and sends the order too kitchenview, made it easier to go back to the start page by just adding a button that would make so it send the user back to the start. removed the button in fronend_objects.html
 Changed kitchenview to easier take orders, it doesnt work rightnow.
 changed the frontend so it should save the order by using localstorage following this https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem. doesnt really work right now
+
+## okt 17 0250
+
+I been sitting here for 2 hours soon to try to implement the confirm button so it would work, but it is not, localstorage isnt doing anything either, when the database is done then i should implement it to the container docker and try to implement it to the server that way we could use it instead of locally save the menu and only be able to add 2 burgers without being able to change them. added function using axios to send the order data to server.js. updated the server.js route to recive the roder from checkout.html and forward it to kitcheview, but its not working right now for the kitchen view logs.
+
+## okt 17 0320
+
+Aldin had a simpler way of dealing with it so checkout.html maybe isnt neccesary.
