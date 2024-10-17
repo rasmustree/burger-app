@@ -20,7 +20,7 @@ we had a meeting to decide who does what and we made a to do doing done in a goo
 
 2024-10-10
 we had a meeting during the lab session, during which I found out that I couldn't just move the database I had created, so I had to start over from scratch.
-I did not figure out how to do it, but Aldin gave the advice to create it directly in the repository.
+I did not figure out how to do it, but Aldin gave the advice to create it directly in the repository. 
 
 2024-10-11
 I could not figure out how to make the database in the repo. First I tried to export an image of the database to it, but I didn't succeed
@@ -40,4 +40,7 @@ the phpmyadmin part was working, but not the database. Since I got too excited a
 continued trying ways to fix it. didn't find one
 
 2024-10-16
-
+I used the official image for mysql as reference, it didn't work. In desperation to see if it was something on my end, I copied this https://medium.com/@chrischuck35/how-to-create-a-mysql-instance-with-docker-compose-1598f3cc1bee
+compose and it worked at first, but after changing some values it stopped working. When I changed it back to the version that worked, it stopped working entirely.
+me and Daniel sat for a couple hours trying to get it. We tested using a cloud service, but couldn't quite get it to work. Though this seems like a reasonable solution to try
+the next session.
