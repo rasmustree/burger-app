@@ -24,6 +24,7 @@ services:
   db:
     image: mysql:5.7
     container_name: MenuStoreContainer
+    platform: linux/x86_64
     ports: 
       - "3307:3306"
     restart: always
