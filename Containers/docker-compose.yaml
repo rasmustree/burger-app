@@ -22,18 +22,19 @@ services:
       - burger-network
 
   db:
-    image: mysql:8.3.0
+    image: mysql:5.7
     container_name: MenuStoreContainer
+    platform: linux/x86_64
     ports: 
       - "3307:3306"
     restart: always
     environment:
-      MYSQL_USER: admin
-      MYSQL_ROOT_PASSWORD: burger1
-      MYSQL_PASSWORD: burger
+      MYSQL_ROOT_PASSWORD: burger
       MYSQL_DATABASE: db
     volumes:
-      - mysql_data:/var/lib/mysql
+       - my-db:/var/lib/mysql:rw
+       - ./MenuStoreDB.sql:/docker-entrypoint-initdb.d/MenuStoreDB.sql
+
     networks:
       - burger-network  # Ensure db is on the same network
 
@@ -43,12 +44,13 @@ services:
     ports:
       - "8077:80"
     environment:
-      PMA_HOST: db  # Specify the database host
+      ports: 8077:80
+      #PMA_HOST: db  # Specify the database host
     networks:
       - burger-network  # Ensure phpMyAdmin is on the same network
 
 volumes:
-  mysql_data:
+  my-db:
 
 networks:
   burger-network:
