@@ -1,14 +1,14 @@
 18-09-24
 --------
-Have started to learn a little Node.js. If you can read this it means ive succesfully used git too
+Have started to learn a little Node.js. If you can read this it means I've successfully used git too
 --------
 20-09-24
 --------
-Have done a little on the file server.js and commitet it. The changes i did affected the different routes in the to-be website.
+Have done a little on the file server.js and commitet it. The changes I did affected the different routes in the to-be website.
 An example of an route is /burger etc. to prepare for later changes. I'll look more into node.js and try to learn a little more.
-Have to tink about how we are to use the database to add different options to the different routes. After that we have to be able to 
+Have to think about how we are to use the database to add different options to the different routes. After that we have to be able to 
 have a checkout menu in the route /checkout/, with options to add and remove the different choices and also a /checkout/send/ which
-confirms the order that you've added and sentds it to kitchenview.
+confirms the order that you've added and sends it to kitchenview.
 --------
 05-10-24
 --------
@@ -24,17 +24,17 @@ We had a meeting today to figure out what we have to resolve. What I have to foc
 website that way. The data should be retrieved, and it should be fetched with a function. There needs to be a function that adds every
 single one of the items and then another function that builds it into clickable (links maybe?). The (links) should lead to a page where you can
 add and remove the ingredients inside it. Once user is happy, it should be added into a checkout, where you can add or remove the items you've added.
-Once the user is happy, the user confirms their order and sends its to kitchenview. Solved my first merge conflict aswell using VS code, couldn't figure it out but now I've succeeded. I've also added a temporary list of burgers before the database is done, just so I can figure out how to make the website work. 
+Once the user is happy, the user confirms their order and sends its to kitchenview. Solved my first merge conflict as-well using VS code, couldn't figure it out but now I've succeeded. I've also added a temporary list of burgers before the database is done, just so I can figure out how to make the website work. 
 Helped Adam with using the github desktop application to push, pull and merge from github.com. 
 --------
 09-11-24
 --------
-We had another meeting today at the library. We used this time to get some work with aldin sorting the folders into better places and containerising burgerorderer. I've learned how docker
-works a bit and managed to start the docker file after many errors. I had issues with the exe not being in $PATH and getting authentication errors. It took alot of my time to fix today, by
+We had another meeting today at the library. We used this time to get some work with Aldin sorting the folders into better places and containerizing Burgerorderer. I've learned how docker
+works a bit and managed to start the docker file after many errors. I had issues with the exe not being in $PATH and getting authentication errors. It took a-lot of my time to fix today, by
 changing the config.json in the .docker bin. After a lot of trial and error that was the fix.
-I've also linked Noahs frontend_objects into server.js/items. 
-Another error we've encountered was that the path towards the frontend_object was broken after Aldins work on sorting. The issue was fixed by adding a /../ at the beggining.
-I've removed all the other routes inside the webapp for simpliciy purposes (as seen in history) which conflicts what i wrote yesterday. That was due to Noah taking the initiative to
+I've also linked Noah's frontend_objects into server.js/items. 
+Another error we've encountered was that the path towards the frontend_object was broken after Aldin's work on sorting. The issue was fixed by adding a /../ at the beginning.
+I've removed all the other routes inside the webapp for simplicity purposes (as seen in history) which conflicts what I wrote yesterday. That was due to Noah taking the initiative to
 create the HTML and CSS for a combined page of all the items.
 Helped Adam with a merge conflict and resolved it for him because he didn't have time.
 Helped Aldin to find out what files are inside docker due to it not finding frontend_objects.html. The problem was that it wasn't there. I imagine its because docker only loads upp the files
@@ -45,4 +45,14 @@ Overall, I am very happy with how its going, and the progress we've all made. Ev
 09-12-24
 --------
 Added button for nuggets. Added two more buttons, one in the route / that leads to /items/ and a button in /items/ that leads to /checkout/. I checked https://www.geeksforgeeks.org/how-to-create-an-html-button-that-acts-like-a-link/
-to find out how to do that. The nugget button i just wrote what Noah did. 
+to find out how to do that. The nugget button I just wrote what Noah did. 
+--------
+09-14-24
+--------
+Aldins adjustments removed my button to checkout after the merge. I've re-added it into his newly designed code and made sure the functionality was still there. 
+--------
+09-15-24
+--------
+Looked a bit into unit testing, day was pretty unproductive and the unittest I created doesn't even feel like its worth comitting. 
+--------
+Today was a very harsh day. Me and Rasmus were scratching our heads for hours because the SQL refused to containerize. We had an error saying "Hello world from appuser! In order to get your application running in a container, take a look at the comments in the Dockerfile to get started.". This error persisted a-lot of the day. We finally managed to fix it by simply changing the SQL version to 8.3.0. I also got an error saying that the architecture wasn't matching my native one, so I chose to use linuxserver's PhpMyAdmin instead by finding the resolution on StackOverFlow. I have sadly lost the link because it doesn't show up in my history for some reason. I watched through a lot of articles to fix the "Hello world from appuser..." error but I could find no info on it online. I don't know why changing the version worked but it was a hail marry attempt. I understand a-bit more about containerization now because of todays experiences. I followed Cloud Guru's tutorial on youtube. https://www.youtube.com/watch?v=qKrKqekiP7I&ab_channel=CloudGuru . I didn't know how to make the data persist so I followed some advice from StackOverFlow to save it inside a volume. While checking the volume it's, in-fact, there. I've tried deleting the old containers etc. and it still followed with. If that follows thru every person using the database from here-on-out, I'm unsure. But hopefully I'll find a guinea pig to test it on. I could technically setup a VM but honestly I'm far too exhausted. If I don't get a guinea pig to fall on my lap I will just, do it tomorrow. I've also taken the liberty to change the ports used by mysql & PhpMyAdmin so it doesn't conflict with BurgerOrderer. Everyone in the group does different stuff and some of us changed positions. It's usually because someones qualities are better used one place than another. For example, I don't know how to do what Aldin's doing. But I could certainly help Rasmus with his week-long issue. 

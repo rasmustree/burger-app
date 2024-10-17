@@ -20,7 +20,7 @@ we had a meeting to decide who does what and we made a to do doing done in a goo
 
 2024-10-10
 we had a meeting during the lab session, during which I found out that I couldn't just move the database I had created, so I had to start over from scratch.
-I did not figure out how to do it, but Aldin gave the advice to create it directly in the repository.
+I did not figure out how to do it, but Aldin gave the advice to create it directly in the repository. 
 
 2024-10-11
 I could not figure out how to make the database in the repo. First I tried to export an image of the database to it, but I didn't succeed
@@ -30,3 +30,62 @@ I made a compose file to create a local database in the repo, which worked. I ha
 into compose format, but I succeeded and you could type open the database in the repo. I did, however need to retype everything in the database.
 The way to do this is to cd burger-app/Containers/backend/MenuStore
 then type docker compose up
+
+2024-10-14
+The former method did create a database, however it was empty. I ended up creating an SQL dump of the database and tried to figure out how start the database using this. I didn't figure it out
+also after building the compose, the database suddenly stopped working. It was constantly restarting and I couldn't find out why. there was no difference even if I commented out the entire dockerfile
+the phpmyadmin part was working, but not the database. Since I got too excited and committed to main, I can't access the working version.
+
+2024-10-15
+continued trying ways to fix it. didn't find one
+
+2024-10-16
+I used the official image for mysql as reference, it didn't work. In desperation to see if it was something on my end, I copied this https://medium.com/@chrischuck35/how-to-create-a-mysql-instance-with-docker-compose-1598f3cc1bee
+compose and it worked at first, but after changing some values it stopped working. The culprit for the error I have been struggling with, seems to be that it doesn't work to
+put image:mysql to latest. When I put it to a specific version the database stopped exiting immediately after starting. Instead I got warnings that stated the following: 
+db-1          | 2024-10-16T16:12:15.347567Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+db-1          | 2024-10-16T16:12:15.349309Z 0 [Note] mysqld (mysqld 5.7.44) starting as process 1 ...
+db-1          | 2024-10-16T16:12:15.358192Z 0 [Note] InnoDB: PUNCH HOLE support available
+db-1          | 2024-10-16T16:12:15.358236Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+db-1          | 2024-10-16T16:12:15.358240Z 0 [Note] InnoDB: Uses event mutexes
+db-1          | 2024-10-16T16:12:15.358243Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+db-1          | 2024-10-16T16:12:15.358248Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+db-1          | 2024-10-16T16:12:15.358250Z 0 [Note] InnoDB: Using Linux native AIO
+db-1          | 2024-10-16T16:12:15.360361Z 0 [Note] InnoDB: Number of pools: 1
+db-1          | 2024-10-16T16:12:15.362475Z 0 [Note] InnoDB: Using CPU crc32 instructions
+db-1          | 2024-10-16T16:12:15.365402Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+db-1          | 2024-10-16T16:12:15.375328Z 0 [Note] InnoDB: Completed initialization of buffer pool
+db-1          | 2024-10-16T16:12:15.380628Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+db-1          | 2024-10-16T16:12:15.396191Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+db-1          | 2024-10-16T16:12:15.411342Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+db-1          | 2024-10-16T16:12:15.411419Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+db-1          | 2024-10-16T16:12:15.427627Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+db-1          | 2024-10-16T16:12:15.428450Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+db-1          | 2024-10-16T16:12:15.428483Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+db-1          | 2024-10-16T16:12:15.429866Z 0 [Note] InnoDB: 5.7.44 started; log sequence number 12219783
+db-1          | 2024-10-16T16:12:15.430004Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+db-1          | 2024-10-16T16:12:15.430227Z 0 [Note] Plugin 'FEDERATED' is disabled.
+db-1          | 2024-10-16T16:12:15.444281Z 0 [Note] InnoDB: Buffer pool(s) load completed at 241016 16:12:15
+db-1          | 2024-10-16T16:12:15.446016Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+db-1          | 2024-10-16T16:12:15.446053Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+db-1          | 2024-10-16T16:12:15.446059Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+db-1          | 2024-10-16T16:12:15.446061Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+db-1          | 2024-10-16T16:12:15.447489Z 0 [Warning] CA certificate ca.pem is self signed.
+db-1          | 2024-10-16T16:12:15.447535Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+db-1          | 2024-10-16T16:12:15.448307Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+db-1          | 2024-10-16T16:12:15.448389Z 0 [Note] IPv6 is available.
+db-1          | 2024-10-16T16:12:15.448400Z 0 [Note]   - '::' resolves to '::';
+db-1          | 2024-10-16T16:12:15.448436Z 0 [Note] Server socket created on IP: '::'.
+db-1          | 2024-10-16T16:12:15.450981Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+db-1          | 2024-10-16T16:12:15.487195Z 0 [Note] Event Scheduler: Loaded 0 events
+db-1          | 2024-10-16T16:12:15.488403Z 0 [Note] mysqld: ready for connections.
+db-1          | Version: '5.7.44'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+me and Daniel sat for a couple hours trying to get it to work. We tested using a cloud service, but couldn't quite get it to work. Though this seems like a reasonable solution to try
+the next session.
+
+2024-10-17:
+I tried deleting all my volumes and containers, and then starting the compose file, and it suddenly worked. I don't think data is sent with it, 
+
+
+1. db-1          | 2024-10-16T16:12:15.347567Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+  fixed  by 

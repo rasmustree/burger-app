@@ -1,0 +1,14 @@
+how to open menustore in phpmyadmin:
+
+1. cd to MenuStore folder
+2. type docker compose up
+3. open browser
+4. type localhost:8888
+5. type name, 'root'
+6. type password, 'burger'
+7. press the "new" button on the left
+8. at the top of the page, it says 'Import'. click there
+9. type browse under file to import.
+10. locate MenuStore in repository and click on MenuStoreDB
+
+you now have an sql database!
