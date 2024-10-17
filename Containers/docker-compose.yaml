@@ -21,6 +21,35 @@ services:
     networks:
       - burger-network
 
+  db:
+    image: mysql:8.3.0
+    container_name: MenuStoreContainer
+    ports: 
+      - "3307:3306"
+    restart: always
+    environment:
+      MYSQL_USER: admin
+      MYSQL_ROOT_PASSWORD: burger1
+      MYSQL_PASSWORD: burger
+      MYSQL_DATABASE: db
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - burger-network  # Ensure db is on the same network
+
+  phpmyadmin:
+    image: linuxserver/phpmyadmin
+    restart: always
+    ports:
+      - "8077:80"
+    environment:
+      PMA_HOST: db  # Specify the database host
+    networks:
+      - burger-network  # Ensure phpMyAdmin is on the same network
+
+volumes:
+  mysql_data:
+
 networks:
   burger-network:
     driver: bridge
