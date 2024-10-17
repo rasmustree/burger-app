@@ -125,3 +125,17 @@ I been sitting here for 2 hours soon to try to implement the confirm button so i
 ## okt 17 0320
 
 Aldin had a simpler way of dealing with it so checkout.html maybe isnt neccesary.
+
+## okt 17 1830
+
+Aldin and the rest of the groupe came together and we chose to use the checkout.html beacuse it is working and we dont have much time left. Noah, me and rasmus have made changes in the docker-compose.yalm so that all the folders could be ran alltogether. https://stackoverflow.com/questions/35086608/npm-start-using-cors this is showing how about that its easy to use npm install connect-cors to be able to use the kitchen view, because now when we run the server, we get an error that says error sending the order. please try again.
+
+## okt 17 2300
+
+still trying to set up kitchen view so it works when using the confirm order but its not really working
+tried to debugg using
+docker-compose logs frontend
+docker-compose logs kitchenview
+docker-compose logs db
+docker-compose logs phpmyadmin
+i went back and forth to see what is the problem, double checked if i missspelled anything used chatgpt to see if their is a small mistake but then i noticed that the checkout.html axios.post doesnt have the same endpoint as the app.post in kitchenview, when i tried it it suddenly worked, now im scared to revert anything that i have changed so im gonna let it be and if we get an error it just to change it back to how it was before i changed it
