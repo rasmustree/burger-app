@@ -25,18 +25,11 @@ app.get('/checkout', (req, res) => {
     res.sendFile(filePath);
 })
 
-app.post('/checkout', (req, res) => {
-    const order = req.body.order;
-
-    res.json({ message: "Order received", order: order });
-})
-
 app.post('/checkout/confirm', (req, res) => {
     const order = req.body; 
     console.log('Order confirmed, sending to kitchen view:', order);
     res.json({ message: 'Order confirmed and sent to the kitchen view' });
 });
-
 
 app.listen(PORT, () => {
     console.log(`server running at http://localhost:${PORT}`); //startar webserver och lyssnar på anslutningar

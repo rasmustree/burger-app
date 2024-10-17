@@ -14,7 +14,7 @@
     <script>
         // Get the ordr saved in localStorage so we can use it now at checkout page.
         let order = JSON.parse(localStorage.getItem('currentOrder'));
-
+        console.log(order)
         // Show the item from user ordr in the 'orderSummary' div section.
         const orderSummaryDiv = document.getElementById('orderSummary');
         order.forEach(item => {

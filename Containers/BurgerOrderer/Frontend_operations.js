@@ -48,16 +48,17 @@ function onItemButtonClick(e){
     ingredientsContainer.appendChild(ingredientsText);
 }
 
-function onOrderButtonClick(){
+function onAddOrderButtonClick(){
     if(selectedBurger != ""){
         order.push(selectedBurger);
+        console.log("added: ", selectedBurger);
     }
 }
 
 // Add function to handle checkout navigation
 function onCheckout() {
     // Save the current order to localStorage for use in the checkout page
-    localStorage.setItem('order', JSON.stringify(order));
+    localStorage.setItem('currentOrder', JSON.stringify(order));
     // Navigate to the checkout page
-    window.location.href = '/checkout.html';
+    window.location.href = '/checkout';
 }
