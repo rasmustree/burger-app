@@ -51,7 +51,7 @@ app.post('/checkout/confirm', (req, res) => {
     };
 
     // Forward the order to the kitchen view
-    axios.post('http://kitchenview:5000/order', orderData)
+    axios.post('http://kitchenview:8078/order', orderData)
         .then(response => {
             console.log('Order forwarded to kitchen view:', response.data);
             res.json({ message: 'Order confirmed and sent to the kitchen view' });
