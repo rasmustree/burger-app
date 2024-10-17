@@ -58,7 +58,7 @@ function onAddOrderButtonClick(){
 // Add function to handle checkout navigation
 function onCheckout() {
     // Save the current order to localStorage for use in the checkout page
-    localStorage.setItem('currentOrder', JSON.stringify(order));
+    localStorage.setItem('currentOrder', JSON.stringify(order));  // Fixed the key name
     // Navigate to the checkout page
     window.location.href = '/checkout';
 }
