@@ -22,6 +22,19 @@ Merge between server and main branch.
 
 Since I last wrote in this diary we decided as a team to not use react and just use standard JavaScript and HTML, since react did not seem appropriate for this assignment, since we are not supposed to make a fancy program with a lot of bells and whistles.
 
+10/11:
 
+I had a problem with docker. Docker couldn't find the correct directory to frontend_objects.html. I tried to copy over the file into docker in the dockerfile. That did not work, Daniel told me to just move the html file into the backend folder so that is what I did. And now at least the program works and we can get some work done.
+
+I got a merge conflict when trying to merge with main, the problem was that I had removed a file in my branch that someone else had merged with main. To solve this I accepted the changes of the file in my branch so as not to disrupt someone else's work. The file that was causing the merge conflict was cheeseburger.html.
+
+10/14:
+I can't get javascript file to work, because of X-Content-Type-Options: nosniff. I have no clue what this is. Pls god help me.
+After a long conversation with chatGPT, I managed to find that the problem was that in the response header the file had content-type: HTML. This meant that the server couldn't find the javascriptfile, and to solve this I had to specify the <script> tag to start with a "/". And to add app.use(express.static(path.join(__dirname))); this line of code to the server.js file. https://expressjs.com/en/starter/static-files.html
+
+I made it so the items page dynamically adds buttons, I'm just waiting on the database. When the buttons are clicked the ingredients of the burger is displayed. Next I'm going to add a button for each item that adds the item to the checkout, and in the checkout page we are planning to add the functionality to remove or add ingredients to the items.
+
+10/15:
+I have realized that I do not enjoy coding in javascript. The reason why is really just small things like semicolons being optional. Oh and I also realized that for some reason I had the dates all mixed up in this dairy.
 
 

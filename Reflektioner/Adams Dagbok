@@ -57,3 +57,71 @@ I also learned what containers are, kinda, its used for the app to be compatible
 ## okt 10 2000
 
 When we got together i tried to understand how to install the docker and tried it myself at home, had a few issues that resolved thanks to this thread "https://docs.docker.com/engine/install/ubuntu/#install-docker-engine". after reading the link i understood a few things, Docker and container isnt the same thing, docker is like container but for backend and container is used for front end, the meaning behind them are basicly the same, its for the app to work/look good on any machine/screen size.
+
+## okt 11 1300
+
+Accedently deleted most of my work i did yesterady and got nothing to show for, but danne helped me fix it
+
+## okt 11 1930
+
+Trying to make so i can start the server and see the others work on the website but i keep getting "Error: ENOENT: no such file or directory, stat '/usr/src/app/frontend_ordering/frontend_objects.html'" message
+
+## okt 12 1600
+
+Added change to directory for app.get in server.js
+Tried to add docker files and .yaml to my kitchenview, started the server at port 8082 im getting and "forbidden error" need to search up what that means , as i understand it will still work to connect every port to eacheother but this is what i have done for now.
+
+## okt 12 1900
+
+Danne helped me change directory in the kitchen view port from 8000 to 5000
+Changed the docker so it looks similar to the others, and just changed the port, still getting errors for now, but not the same error as before (forbidden error). Added package.json as it will become easier to build the kitchen view when its textbased in node.
+
+## okt 12 2100
+
+Made so kitchen view can be run in port 5000
+had problems with setting up the docker and .yaml, but when i updated
+docker compose up it worked
+
+## okt 12 2320
+
+Realised we didnt need a website for this to work could just do everything in the terminal for the kitchen view atleast. Still not going to deleted the html file, learned from it, and maybe going to need to use the api i added their if thats somthing we are going to use. Just made a simple js file to run at port5000 made sure it looked like server.js
+
+## okt 13 1700
+
+Tried to make a general compose-docker file but it didnt work, kept on getting an error that it couldnt read kitchenview image Dockerfile not found, but it had a dockerfile. so i uploaded what i made for now.
+
+## okt 15 1700
+
+multiple problems happend today, and thanks to Danne i got all of the problems to get fixed, apperantly i had menustore server up on my computer even when i shut down or reseted my pc it was still up but one of these command helped to remove it: "fuser 8080/tcp" "fuser -k 8080/tcp" "kill -9 $(lsof -t -i:8080)". that tooks 2 hours to find the fix and also when i would try to pull the main file then my system would say denied and that everything was deleted, so i just deleted it from my pc and redownloaded it from the github server again.
+
+## okt 15 2300
+
+Tried to go back to the docker system and tried adding a dockerfile, still wouldnt work so now i moved on to the api instead.
+Trying to make an basic api using fetch following this youtube video https://www.youtube.com/watch?v=cuEtnrL9-H0.
+
+## okt 16 0010
+
+Almost crashed everything today, so i just reverted everything back to how it was.
+Learnt how to force shutdown a server, see what server is up by "docker ps -a" learnt how to debug a container by checking "docker ps"
+
+## okt 16 2320
+
+Downloaded alot of npm files, wrote npm install, npm install axios, npm install express to both Burgerorderer and kitchenview, just tried to make so the docker in container folder would work, it finally worked somehow, the servers arent really opening corectly but i will check it soon why it wont start correctly.
+
+## okt 16 0000
+
+Saw that the surver could run at port 3000 so i changed in the container compose.yaml file that its is externally 8080 and internally 3000 and it worked. another error i would get is that the menustore wont open, but danne told me they didnt need it so i removed it and that worked too.
+
+## okt 17 0130
+
+Added a checkout.html file that should take the order and added the confirm so it matches the server.js and sends the order too kitchenview, made it easier to go back to the start page by just adding a button that would make so it send the user back to the start. removed the button in fronend_objects.html
+Changed kitchenview to easier take orders, it doesnt work rightnow.
+changed the frontend so it should save the order by using localstorage following this https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem. doesnt really work right now
+
+## okt 17 0250
+
+I been sitting here for 2 hours soon to try to implement the confirm button so it would work, but it is not, localstorage isnt doing anything either, when the database is done then i should implement it to the container docker and try to implement it to the server that way we could use it instead of locally save the menu and only be able to add 2 burgers without being able to change them. added function using axios to send the order data to server.js. updated the server.js route to recive the roder from checkout.html and forward it to kitcheview, but its not working right now for the kitchen view logs.
+
+## okt 17 0320
+
+Aldin had a simpler way of dealing with it so checkout.html maybe isnt neccesary.

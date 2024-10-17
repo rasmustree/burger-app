@@ -57,7 +57,7 @@ services:
     #  dockerfile: docker_db
 
   phpmyadmin:
-    image: phpmyadmin
+    image: linuxserver/phpmyadmin
     restart: always
     ports:
       - 8888:80
