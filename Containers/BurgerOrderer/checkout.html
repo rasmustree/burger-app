@@ -11,7 +11,7 @@
     <div id="orderSummary"></div>
     <button id="confirmButton">Confirm Order</button>
     <button onclick="goBackToStart()">Go Back to Start</button>
-
+    <script type="module" src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
         // Retrieve the order from localStorage
         let order = JSON.parse(localStorage.getItem('currentOrder')) || []; 
