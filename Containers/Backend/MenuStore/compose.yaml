@@ -9,22 +9,46 @@
 # https://github.com/docker/awesome-compose
 #version: 'latest'
 
+
+
 services:
   db:
-    image: mysql:latest
-    container_name: MenuStoreContainer
-    ports: 
-      - 3307:3306
+    image: mysql:5.7
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: burger
-      MYSQL_DATABASE: db
+      MYSQL_DATABASE: 'db'
+      MYSQL_ROOT_PASSWORD: 'burger'
+      # So you don't have to use root, but you can if you like
+      #MYSQL_USER: 'user'
+      # You can use whatever password you like
+      #MYSQL_PASSWORD: 'password'
+      # Password for root access
+      
+    ports:
+      # <Port exposed> : <MySQL Port running inside container>
+      - '3306:3306'
+    #expose:
+      # Opens port 3306 on the container
+      #- '3306'
+      # Where our data will be persisted
     volumes:
+      - my-db:/var/lib/mysql
+      #- ./MenuStoreDB:/docker-entrypoint-initdb.d
+      #./:/vol
+#    image: mysql:latest
+#    container_name: MenuStoreContainer
+#    ports: 
+#      - 3307:3306
+#    restart: always
+#    environment:
+#      MYSQL_ROOT_PASSWORD: burger
+#      MYSQL_DATABASE: db
+#    volumes:
       #- db:/var/lib/mysql
       #- ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
       #- burger-db:/var/lib/mysql
       #- ./db.sql:/docker-entrypoiont-initdb.d/init.sql
-      - ./:/vol
+#      - ./:/vol
     #build:
     #  context: .
     #  dockerfile: docker_db
@@ -36,7 +60,10 @@ services:
       - 8080:80
     environment:
       ports: 8080:80
-#volumes:
+    depends_on:
+      - db
+volumes:
+  my-db:
   #burger-db
 #  db:
 #    driver: local
