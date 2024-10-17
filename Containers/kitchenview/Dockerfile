@@ -17,7 +17,7 @@ RUN npm install --omit=dev
 COPY . .
 
 # Expose the port
-EXPOSE 5000
+EXPOSE 8078
 
 # Start the application
 CMD ["node", "kitchenview.js"]
