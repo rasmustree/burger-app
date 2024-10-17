@@ -60,9 +60,9 @@ services:
     image: phpmyadmin
     restart: always
     ports:
-      - 8080:80
+      - 8888:80
     environment:
-      ports: 8080:80
+      ports: 8888:80
     depends_on:
       - db
 volumes:

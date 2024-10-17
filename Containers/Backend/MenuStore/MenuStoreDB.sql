@@ -20,12 +20,12 @@ SET time_zone = "+00:00";
 --
 -- Database: `db`
 --
-CREATE DATABASE IF NOT EXISTS `db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+CREATE DATABASE IF NOT EXISTS `db` DEFAULT CHARACTER SET utf8mb4;
 USE `db`;
 --
 -- Database: `MenuStoreDB`
 --
-CREATE DATABASE IF NOT EXISTS `MenuStoreDB` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+CREATE DATABASE IF NOT EXISTS `MenuStoreDB` DEFAULT CHARACTER SET utf8mb4;
 USE `MenuStoreDB`;
 
 -- --------------------------------------------------------
@@ -38,7 +38,7 @@ CREATE TABLE `burgers` (
   `id` int NOT NULL,
   `name` text NOT NULL,
   `ingredients` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `burgers`
@@ -59,7 +59,7 @@ INSERT INTO `burgers` (`id`, `name`, `ingredients`) VALUES
 CREATE TABLE `drinks` (
   `id` int NOT NULL,
   `name` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `drinks`
@@ -82,7 +82,7 @@ CREATE TABLE `ingredients` (
   `id` int NOT NULL,
   `name` text NOT NULL,
   `type` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `ingredients`
@@ -114,7 +114,7 @@ CREATE TABLE `menues` (
   `name` text NOT NULL,
   `burger` text NOT NULL,
   `sides` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `menues`
@@ -138,7 +138,7 @@ CREATE TABLE `sides` (
   `id` int NOT NULL,
   `name` text NOT NULL,
   `type` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `sides`
