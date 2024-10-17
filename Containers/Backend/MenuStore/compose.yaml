@@ -32,7 +32,9 @@ services:
       #- '3306'
       # Where our data will be persisted
     volumes:
-      - my-db:/var/lib/mysql
+      - my-db:/var/lib/mysql:rw
+      #- ./docker/mysql/data:/var/lib/mysql:rw
+      - ./MenuStoreDB.sql:/docker-entrypoint-initdb.d/MenuStoreDB.sql
       #- ./MenuStoreDB:/docker-entrypoint-initdb.d
       #./:/vol
 #    image: mysql:latest
