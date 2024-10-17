@@ -27,7 +27,7 @@ add and remove the ingredients inside it. Once user is happy, it should be added
 Once the user is happy, the user confirms their order and sends its to kitchenview. Solved my first merge conflict as-well using VS code, couldn't figure it out but now I've succeeded. I've also added a temporary list of burgers before the database is done, just so I can figure out how to make the website work. 
 Helped Adam with using the github desktop application to push, pull and merge from github.com. 
 --------
-09-11-24
+09-10-24
 --------
 We had another meeting today at the library. We used this time to get some work with Aldin sorting the folders into better places and containerizing Burgerorderer. I've learned how docker
 works a bit and managed to start the docker file after many errors. I had issues with the exe not being in $PATH and getting authentication errors. It took a-lot of my time to fix today, by
@@ -42,17 +42,24 @@ in the root of where it was composed. To find out what files are inside the dock
 Aldin has work to do on the js side of the html for what the buttons should do. We will have another meeting tomorrow and hopefully it will be just as productive.
 Overall, I am very happy with how its going, and the progress we've all made. Everyone has different levels of experience and qualities and we're all contributing what we can as a team.
 --------
-09-12-24
+12-10-24
 --------
 Added button for nuggets. Added two more buttons, one in the route / that leads to /items/ and a button in /items/ that leads to /checkout/. I checked https://www.geeksforgeeks.org/how-to-create-an-html-button-that-acts-like-a-link/
 to find out how to do that. The nugget button I just wrote what Noah did. 
 --------
-09-14-24
+14-10-24
 --------
 Aldins adjustments removed my button to checkout after the merge. I've re-added it into his newly designed code and made sure the functionality was still there. 
 --------
-09-15-24
+15-10-24
 --------
-Looked a bit into unit testing, day was pretty unproductive and the unittest I created doesn't even feel like its worth comitting. 
+Looked a bit into unit testing, day was pretty unproductive and the unittest I created doesn't even feel like its worth comitting.
+-------- 
+16-10-24
 --------
 Today was a very harsh day. Me and Rasmus were scratching our heads for hours because the SQL refused to containerize. We had an error saying "Hello world from appuser! In order to get your application running in a container, take a look at the comments in the Dockerfile to get started.". This error persisted a-lot of the day. We finally managed to fix it by simply changing the SQL version to 8.3.0. I also got an error saying that the architecture wasn't matching my native one, so I chose to use linuxserver's PhpMyAdmin instead by finding the resolution on StackOverFlow. I have sadly lost the link because it doesn't show up in my history for some reason. I watched through a lot of articles to fix the "Hello world from appuser..." error but I could find no info on it online. I don't know why changing the version worked but it was a hail marry attempt. I understand a-bit more about containerization now because of todays experiences. I followed Cloud Guru's tutorial on youtube. https://www.youtube.com/watch?v=qKrKqekiP7I&ab_channel=CloudGuru . I didn't know how to make the data persist so I followed some advice from StackOverFlow to save it inside a volume. While checking the volume it's, in-fact, there. I've tried deleting the old containers etc. and it still followed with. If that follows thru every person using the database from here-on-out, I'm unsure. But hopefully I'll find a guinea pig to test it on. I could technically setup a VM but honestly I'm far too exhausted. If I don't get a guinea pig to fall on my lap I will just, do it tomorrow. I've also taken the liberty to change the ports used by mysql & PhpMyAdmin so it doesn't conflict with BurgerOrderer. Everyone in the group does different stuff and some of us changed positions. It's usually because someones qualities are better used one place than another. For example, I don't know how to do what Aldin's doing. But I could certainly help Rasmus with his week-long issue. 
+--------
+17-10-24
+--------
+I helped a bit with the database as a QA, it didn't work on my mac. Micke helped us to fix it for macs aswell by using linux architecture inside docker. I helped Aldin troubleshoot what wasn't working with his code, which later got discarded. We had problems getting axios to work on the website, but I fixed that by importing a script as written in Stack Overflow:
+https://stackoverflow.com/questions/53963653/unexpected-identifier-axios-import-call-expects-exactly-one-argument
