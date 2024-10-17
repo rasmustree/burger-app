@@ -30,7 +30,7 @@
             orderId++; // Increment orderId for each order
 
             // Send order to backend
-            axios.post('http://localhost:5000/order', { orderId, items: order }) // Ensure this matches your curl command
+            axios.post('http://localhost:8078/order', { orderId, items: order }) // Ensure this matches your curl command
                 .then(response => {
                     console.log('Order confirmed:', response.data);
                     alert('Order sent to the kitchen');
