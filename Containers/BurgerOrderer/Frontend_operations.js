@@ -19,7 +19,7 @@ function onStart(){
     }
     var orderButton = document.createElement("button");
     orderButton.textContent = "Add To Order";
-    orderButton.addEventListener("click", onOrderButtonClick);
+    orderButton.addEventListener("click", onAddOrderButtonClick);
     orderButtonContainer.appendChild(orderButton);
 }
 function onItemButtonClick(e){
@@ -40,11 +40,29 @@ function onItemButtonClick(e){
     }
     ingredientsContainer.appendChild(ingredientsText);
 }
-function onOrderButtonClick(){
+function onAddOrderButtonClick(){
     if(selectedBurger != ""){
         order.push(selectedBurger);
     }
     for(let i = 0; i < order.length; i++){
         console.log(order[i]);
+    }
+}
+
+function onOrderButtonClick(){
+    if (order.length > 0){
+        fetch('/checkout/', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: (JSON.stringify(order))
+        }).then(response => response.json()).then(data => {
+            console.log("Order recieved by server: ", data);
+            window.location.href = '/checkout';
+        })
+    }
+    else{
+        console.log("empty");
     }
 }

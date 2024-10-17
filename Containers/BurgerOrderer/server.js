@@ -3,7 +3,7 @@ const app = express(); //skapa instans av express
 const PORT = 3000;
 const path = require('path');
 
-
+app.use(express.json());
 app.use(express.static(path.join(__dirname)));
 
 app.get('/', (req, res) => {
@@ -19,9 +19,16 @@ app.get('/items', (req, res) => {
     res.sendFile(filePath);
 })
 
-app.get('/checkout/', (req, res) => {
-    res.send('Here is a list of items user selected');
-    console.log('User entered checkout');
+app.get('/checkout', (req, res) => {
+    const filePath = path.join(__dirname, 'checkout.html');
+    
+    res.sendFile(filePath);
+})
+
+app.post('/checkout', (req, res) => {
+    const order = req.body.order;
+
+    res.json({ message: "Order received", order: order });
 })
 
 app.get('/checkout/confirm/', (req, res) => {
