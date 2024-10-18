@@ -69,12 +69,6 @@ app.post('/checkout/confirm', (req, res) => {
     const order = req.body;
     console.log('Order confirmed, sending to kitchen view:', order);
 
-    // Include orderId when forwarding the order
-    const orderData = {
-        orderId: order.orderId,
-        items: order.items
-    };
-
     // Forward the order to the kitchen view
     axios.post('http://kitchenview:8078/order', orderData)
         .then(response => {
