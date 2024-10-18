@@ -1,16 +1,20 @@
-// temp array
-const burgers = [
-    ["Cheeseburgare", "Bröd", "Kött", "Ost", "Sallad", "Ketchup"],
-    ["Kycklingburgare", "Bröd", "Kyckling", "Ost", "Sallad", "Ketchup"]
-]
 const optionsContainer = document.getElementById("options");
 const ingredientsContainer = document.getElementById("ingredients");
 const orderButtonContainer = document.getElementById("orderButton");
 
 selectedBurger = "";
 order = [];
+let burger = []
 
-function onStart(){
+fetch('/burgers').then(
+    respone => respone.json()
+).then(
+    data => {
+        burgers = data;
+        onStart(burgers);
+});
+
+function onStart(burgers){
     for(let i = 0; i < burgers.length; i++ ){
         var button = document.createElement("button");
         button.textContent = burgers[i][0];
@@ -19,7 +23,7 @@ function onStart(){
     }
     var orderButton = document.createElement("button");
     orderButton.textContent = "Add To Order";
-    orderButton.addEventListener("click", onAddOrderButtonClick);
+    orderButton.addEventListener("click", onOrderButtonClick);
     orderButtonContainer.appendChild(orderButton);
     
     // Add checkout button to navigate to checkout page
@@ -48,10 +52,12 @@ function onItemButtonClick(e){
     ingredientsContainer.appendChild(ingredientsText);
 }
 
-function onAddOrderButtonClick(){
+function onOrderButtonClick(){
     if(selectedBurger != ""){
         order.push(selectedBurger);
-        console.log("added: ", selectedBurger);
+    }
+    for(let i = 0; i < order.length; i++){
+        console.log(order[i]);
     }
 }
 
@@ -60,5 +66,5 @@ function onCheckout() {
     // Save the current order to localStorage for use in the checkout page
     localStorage.setItem('currentOrder', JSON.stringify(order));  // Fixed the key name
     // Navigate to the checkout page
-    window.location.href = '/checkout';
+    window.location.href = '/checkout.html';
 }
