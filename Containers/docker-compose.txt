@@ -1,0 +1,2 @@
+This start the containers and the bridge so that the 
+containers can conmunicate with eachother.
