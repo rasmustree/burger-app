@@ -23,6 +23,11 @@
             let orderItem = document.createElement('p');
             orderItem.textContent = item;
             orderSummaryDiv.appendChild(orderItem);
+
+            axios.get(`/checkout/ingredients/${item}`).then(
+                response => {
+                    console.log('Recived item: ', response.data.ingredients);
+                })
         });
 
         // Function to confirm the order
