@@ -80,8 +80,8 @@ db-1          | 2024-10-16T16:12:15.450981Z 0 [Warning] Insecure configuration f
 db-1          | 2024-10-16T16:12:15.487195Z 0 [Note] Event Scheduler: Loaded 0 events
 db-1          | 2024-10-16T16:12:15.488403Z 0 [Note] mysqld: ready for connections.
 db-1          | Version: '5.7.44'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
-me and Daniel sat for a couple hours trying to get it to work. We tested using a cloud service, but couldn't quite get it to work. Though this seems like a reasonable solution 
-to try the next session.
+me and Daniel sat for a couple hours trying to get it to send the database contents. We tested using a cloud service, but couldn't quite get it to work. Though this seems like 
+a reasonable solution to try the next session.
 
 2024-10-17:
 I tried deleting all my volumes and containers, and then starting the compose file, and it suddenly worked. data was not sent with it however.
