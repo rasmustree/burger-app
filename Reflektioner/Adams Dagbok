@@ -138,4 +138,15 @@ docker-compose logs frontend
 docker-compose logs kitchenview
 docker-compose logs db
 docker-compose logs phpmyadmin
-i went back and forth to see what is the problem, double checked if i missspelled anything used chatgpt to see if their is a small mistake but then i noticed that the checkout.html axios.post doesnt have the same endpoint as the app.post in kitchenview, when i tried it it suddenly worked, now im scared to revert anything that i have changed so im gonna let it be and if we get an error it just to change it back to how it was before i changed it
+i went back and forth to see what is the problem, double checked if i missspelled anything used chatgpt to see if their is a small mistake but then i noticed that the checkout.html axios.post doesnt have the same endpoint as the app.post in kitchenview, when i tried it it suddenly worked, now im scared to revert anything that i have changed so im gonna let it be and if we get an error it just to change it back to how it was before i changed it.
+
+## okt 18 0800
+
+Me and ramsus have been up to trying to fix so the server.js talks to the database but it didnt work, its 30 min left and we contoinoud to just get the error Internal Server Error and GET
+http://localhost:8080/items
+[HTTP/1.1 500 Internal Server Error 21ms]
+
+This page is in Quirks Mode. Page layout may be impacted. For Standards Mode use “<!DOCTYPE html>”.
+items
+GET
+http://localhost:8080/favicon.ico, which we didnt really understand. Now at 1200 aldin is trying to fix it, untill 14 we all are going to try to check so everything is fine for submission.
