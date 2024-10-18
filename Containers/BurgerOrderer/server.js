@@ -13,6 +13,12 @@ const corsOptions = {
     credentials: true
 };
 
+// replace with database
+const burgers = [
+    ["Cheeseburgare", "Bröd", "Kött", "Ost", "Sallad", "Ketchup"],
+    ["Kycklingburgare", "Bröd", "Kyckling", "Ost", "Sallad", "Ketchup"]
+]
+
 app.use(cors(corsOptions)); 
 app.use(express.static(path.join(__dirname)));
 app.use(express.json());
@@ -24,6 +30,9 @@ app.get('/', (req, res) => {
     console.log('User has entered BurgerOrderer');
 });
 
+app.get('/burgers', (req, res) =>{
+    res.json(burgers);
+})
 // Route for items
 app.get('/items', (req, res) => {
     const filePath = path.join(__dirname, 'frontend_objects.html');
