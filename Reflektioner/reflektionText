@@ -1,0 +1,26 @@
+Rasmus Ängarp, Aldin jusufagic , Noah Andersson, Adam Saab, Daniel Ramadan
+
+https://github.com/rasmustree/burger-app
+
+Konfigurationshantering är ett sätt att hålla koll på ett stort projekt med många rörliga delar. Det går att se vem som gjort vad, var och när det gjorts.
+
+ett vanligt arbetsflöde med git är att man kopierar koden in repot, skapar en branch med git branch , klonar branchen med git clone och ändrar den lokalt. Sedan pushar man till branchen med git push och mergar branchen med main med git merge efter man gjort det man vill.
+
+• Vad gick bra?
+servern
+sätta upp bridge mellan containers
+frontend
+kitchen view gick bra
+arbeta med github gick bra
+
+• Vad gick mindre bra?
+databasen tog extremt lång tid att bli klar och även då behövde man manuellt importera från en sql dump.
+Det tog mycket tid och var svårt att lära sig docker och composes.
+
+
+
+• Hur löste ni svårigheterna? Hade ni kunnat göra annorlunda?
+	Om vi började arbeta på projektet tidigare hade vi haft mycket mer tid att arbeta med dessa problem
+	Databasen löstes genom att testa att ta bort och ändra sak efter sak.
+• Vad lyckades ni inte lösa? Varför inte?
+	Att ändra alla constants till databas queries. främst för databasen blev klar så sen. 
