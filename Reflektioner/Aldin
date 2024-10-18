@@ -47,4 +47,10 @@ When I first made the script in frontend_operations I forgot that it should fetc
 
 I will now try to use similar logic for the checkout page to create a list of the ingredients and add the functionality of modifying the ingredients before sending to kitchenview.
 
+10/18:
+
+The database is still not implemented but my latest changes have been focused on making it easy to implement a database. Like my last change in the items page and now in the checkout page. Im making everything fetch data from the server so that when the database is implemented only the server need to communicate with it. I have learned a bit about using api request in node and it's fun when you understand a bit, however I still don't like javascript >:(
+
+I was able to make it so the user can edit the order and send It to kitchen view, however the UI is kinda confusing for the checkout page but that is because I didn't have a lot of time to fix it.
+
 
