@@ -25,7 +25,6 @@ function onStart(burgers){
     orderButton.addEventListener("click", onOrderButtonClick);
     orderButtonContainer.appendChild(orderButton);
     
-    // Add checkout button to navigate to checkout page
     var checkoutButton = document.createElement("button");
     checkoutButton.textContent = "Checkout";
     checkoutButton.addEventListener("click", onCheckout);
@@ -36,9 +35,12 @@ function onItemButtonClick(e){
     console.log(e.target.textContent + " has been clicked!");
     var ingredientsText = document.createElement("p");
     let existingParagraph = ingredientsContainer.querySelector("p");
+
     if(existingParagraph){
         existingParagraph.remove();
     }
+
+    //add selected burgers ingredients to ingredientsText
     for (let i = 0; i < burgers.length; i++) {
         if (burgers[i][0] === e.target.textContent){
             selectedBurger = burgers[i][0];

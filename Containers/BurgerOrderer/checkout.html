@@ -16,7 +16,7 @@
         // Retrieve the order from localStorage
         let order = JSON.parse(localStorage.getItem('currentOrder')) || []; 
         let orderId = 0; // Initialize orderId
-
+        let currentOrders = {};
         // Display the order
         const orderSummaryDiv = document.getElementById('orderSummary');
         order.forEach(item => {
@@ -24,18 +24,44 @@
             orderItem.textContent = item;
             orderSummaryDiv.appendChild(orderItem);
 
+            currentOrders[item] = []; 
+
             axios.get(`/checkout/ingredients/${item}`).then(
                 response => {
+                    //get ingreidents of burger from server
                     console.log('Recived item: ', response.data.ingredients);
+
+                    let ingredientsList = document.createElement('ul');
+
+                    response.data.ingredients.forEach(ingredient =>{
+                        let ingredientItem = document.createElement('li');
+                        ingredientItem.textContent = ingredient;
+                        
+                        currentOrders[item].push(ingredient)
+
+                        let removeButton = document.createElement("button")
+                        removeButton.textContent = "-";
+
+                        removeButton.addEventListener('click', () => {
+                            //remove ingredient
+                            ingredientItem.remove();
+                            let index = currentOrders[item].indexOf(ingredient)
+                            if(index != -1){
+                                currentOrders[item].splice(index, 1)
+                            }
+                        })
+                        ingredientItem.appendChild(removeButton);
+                        ingredientsList.appendChild(ingredientItem);
+                    })
+                    orderSummaryDiv.appendChild(ingredientsList);
                 })
         });
 
         // Function to confirm the order
         function confirmOrder() {
-            orderId++; // Increment orderId for each order
-
+            orderId++;
             // Send order to backend
-            axios.post('http://localhost:8078/order', { orderId, items: order }) // Ensure this matches your curl command
+            axios.post('http://localhost:8078/order', { orderId, currentOrders }) // Ensure this matches your curl command
                 .then(response => {
                     console.log('Order confirmed:', response.data);
                     alert('Order sent to the kitchen');
