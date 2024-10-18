@@ -84,8 +84,10 @@ me and Daniel sat for a couple hours trying to get it to work. We tested using a
 the next session.
 
 2024-10-17:
-I tried deleting all my volumes and containers, and then starting the compose file, and it suddenly worked. I don't think data is sent with it, 
+I tried deleting all my volumes and containers, and then starting the compose file, and it suddenly worked. data was not sent with it however.
+after corresponding with Mikael, he said it was fine to need to manually fill the database, as long as there are instructions. So that is what we'll be going with.
+and since the database works, I decided not to touch the previous issues due to lack of time. However since many features I used are deprecated it will cause issues in the future
+for this project. 
 
-
-1. db-1          | 2024-10-16T16:12:15.347567Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
-  fixed  by 
+2024-10-17:
+purpose of today: swapping all constants with sql queries.
