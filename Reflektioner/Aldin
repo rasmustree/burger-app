@@ -53,4 +53,6 @@ The database is still not implemented but my latest changes have been focused on
 
 I was able to make it so the user can edit the order and send It to kitchen view, however the UI is kinda confusing for the checkout page but that is because I didn't have a lot of time to fix it.
 
+At the start of this project we split up our roles and i was supposed to do backend work, however it seems i kinda became fullstack.
+
 
