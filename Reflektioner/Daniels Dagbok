@@ -61,5 +61,9 @@ Today was a very harsh day. Me and Rasmus were scratching our heads for hours be
 --------
 17-10-24
 --------
-I helped a bit with the database as a QA, it didn't work on my mac. Micke helped us to fix it for macs aswell by using linux architecture inside docker. I helped Aldin troubleshoot what wasn't working with his code, which later got discarded. We had problems getting axios to work on the website, but I fixed that by importing a script as written in Stack Overflow:
+I helped a bit with the database as a QA, it didn't work on my mac. Micke helped us to fix it for macs as-well by using linux architecture inside docker. I helped Aldin troubleshoot what wasn't working with his code, which later got discarded. We had problems getting axios to work on the website, but I fixed that by importing a script as written in Stack Overflow:
 https://stackoverflow.com/questions/53963653/unexpected-identifier-axios-import-call-expects-exactly-one-argument
+--------
+18-10-24
+--------
+Today is the last day until the deadline. We are tying upp loose ends and finishing / polishing the project. I think the project went pretty well. 
