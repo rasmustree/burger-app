@@ -1,0 +1,44 @@
+Skriv gemensamt en sammanfattande text i katalogen Reflektioner. Följande
+skall ingå:
+1. Namn på alla i teamet.
+Rasmus Ängarp, Noah Andersson, Aldin Jusufagic, Adam Saab, Daniel Abu Ramadan
+2. Länk till projektets sida på git-servern.
+https://github.com/rasmustree/burger-app.git
+6
+3. Kort sammanfattning om vad ni implementerat. Beskriv med 5–10 meningar
+vad ni gjort och hur ni tänkt för
+• Projektet i stort
+• Varje container
+	BurgerOrderer:
+	container för server.js och frontend_ordering.js Displays the självaste hemsidan hur de ser ut  och alla knappar, checkout.html fixade att ordern skickas till en annan sida så att de skulle bli enklare för kitchen view och att ändra ordern att kunna göras. 
+	Menu Store:
+	Jag gjorde en databas i en container först, men den gick inte att skicka till projektet så jag gjorde den i en compose, som efter mycket tid fungerade. 
+	phpmyadmin;
+	gränssnitt till menustore hade aldrig problem med detta.
+	Kitchenview: Arbetade med kitchenview implementerade en basic .js fil som jag tog grunderna av vad som redan fanns på server.js och att de ska vara så simpelt som möjligt att skriva ut genom att använda displayen i terminalen 
+	Docker-compose: Docker använde vi för att kunna skapa en bridge till de olika filerna så att de kunde snacka med varandra och kunna starta allting tillsammans när vi använde oss av docker compose up.
+Dockerfile: Docker file hade all information vad som ska bli körd i självaste filen/folders och vilken port de kör i.  
+• Varje modul
+4. Era erfarenheter om hur projektet gick att genomföra.
+• Vad gick bra?
+	Det gick bra att sätta upp bridge då det bara krävdes att sätta alla containrar till samma network. Det behövdes dock lite hjälp med hur man kom till sidan så att man kunde göra det.
+	Att koda gick bra då de flesta i gruppen har erfarenhet med att programmera sen tidigare.
+• Vad gick mindre bra?
+
+Det var väldigt svårt att lära sig docker. Det blev väldigt stressigt med containers eftersom det brukar vara en av de tidigare delarna att implementera. Vi hade ingen erfarenhet med containers så vi väntade på genomgång om hur man gör med containers. Vilket kom en bit in i kursen.
+• Hur löste ni svårigheterna? Hade ni kunnat göra annorlunda?
+Vi löste det antingen själva med traditionell problemlösning och felsökning, men om vi hade möte, så hjälper vi varandra så gott det gick. 
+• Vad lyckades ni inte lösa? Varför inte?
+att informationen i databasen skickades till resten av projektet. Just nu använder det bara constants. 
+5. Era erfarenheter om att arbeta med containers.
+• Vad gick bra?
+Det gick ganska snabbt att sätta upp bridge då det inte krävdes så många komandon.
+att ändra saker när man väl fick det att fungera.
+• Vad gick mindre bra?
+Compose filer och konflikter med versioner och olika operativsystem. Detta var anledningen databasen tog sådan tid.
+• Hur löste ni svårigheterna? Hade ni kunnat göra annorlunda?
+mycket felsökning och trial and error. 
+• Vad lyckades ni inte lösa? Varför inte?
+Att ersätta vissa constants med sql queries
+Kopiera texten och skicka in den på Canvas för bedömning. Se vidare in-
+struktioner på Canvas om inlämningsdatum mm

@@ -1,6 +1,6 @@
 const express = require('express'); //import express
 const app = express(); //skapa instans av express
-const PORT = 3000;
+const PORT = 8080;
 const path = require('path');
 const axios = require('axios');
 const cors = require('cors');
