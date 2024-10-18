@@ -33,6 +33,7 @@ app.get('/', (req, res) => {
 app.get('/burgers', (req, res) =>{
     res.json(burgers);
 })
+
 // Route for items
 app.get('/items', (req, res) => {
     const filePath = path.join(__dirname, 'frontend_objects.html');
@@ -47,6 +48,21 @@ app.get('/checkout/', (req, res) => {
     console.log('User entered checkout');
     res.sendFile(filePath);
 });
+
+app.get('/checkout/ingredients/:name', (req, res) => {
+    const burgerName = req.params.name
+    const ingredients = [];
+
+    for(let i = 0; i < burgers.length; i++){
+        if(burgers[i][0] === burgerName){
+            for(let j = 1; j < burgers[i].length; j++){
+                ingredients.push(burgers[i][j]);
+            }
+            return res.json({ingredients});
+        }
+    }
+    
+})
 
 // Route for order confirmation and sending to kitchen view
 app.post('/checkout/confirm', (req, res) => {

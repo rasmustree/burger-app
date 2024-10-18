@@ -4,7 +4,6 @@ const orderButtonContainer = document.getElementById("orderButton");
 
 selectedBurger = "";
 order = [];
-let burger = []
 
 fetch('/burgers').then(
     respone => respone.json()
