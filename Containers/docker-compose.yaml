@@ -4,7 +4,7 @@ services:
       context: ./BurgerOrderer
       dockerfile: Dockerfile
     ports:
-      - "8080:3000"
+      - "8080:3000" # Frontend should be available on port 8080
     environment:
       NODE_ENV: production
     networks:
@@ -15,7 +15,7 @@ services:
       context: ./kitchenview
       dockerfile: Dockerfile
     ports:
-      - "5000:5000"
+      - "8078:8078"
     environment:
       NODE_ENV: production
     networks:
@@ -25,18 +25,17 @@ services:
     image: mysql:5.7
     container_name: MenuStoreContainer
     platform: linux/x86_64
-    ports: 
+    ports:
       - "3307:3306"
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: burger
       MYSQL_DATABASE: db
     volumes:
-       - my-db:/var/lib/mysql:rw
-       - ./MenuStoreDB.sql:/docker-entrypoint-initdb.d/MenuStoreDB.sql
-
+      - my-db:/var/lib/mysql:rw
+      - ./MenuStoreDB.sql:/docker-entrypoint-initdb.d/MenuStoreDB.sql
     networks:
-      - burger-network  # Ensure db is on the same network
+      - burger-network
 
   phpmyadmin:
     image: linuxserver/phpmyadmin
@@ -44,10 +43,9 @@ services:
     ports:
       - "8077:80"
     environment:
-      ports: 8077:80
-      #PMA_HOST: db  # Specify the database host
+      PMA_HOST: db
     networks:
-      - burger-network  # Ensure phpMyAdmin is on the same network
+      - burger-network
 
 volumes:
   my-db:

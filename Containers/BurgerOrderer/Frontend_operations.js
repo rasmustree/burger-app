@@ -1,8 +1,3 @@
-// temp array
-const burgers = [
-    ["Cheeseburgare", "Bröd", "Kött", "Ost", "Sallad", "Ketchup"],
-    ["Kycklingburgare", "Bröd", "Kyckling", "Ost", "Sallad", "Ketchup"]
-]
 const optionsContainer = document.getElementById("options");
 const ingredientsContainer = document.getElementById("ingredients");
 const orderButtonContainer = document.getElementById("orderButton");
@@ -10,7 +5,15 @@ const orderButtonContainer = document.getElementById("orderButton");
 selectedBurger = "";
 order = [];
 
-function onStart(){
+fetch('/burgers').then(
+    respone => respone.json()
+).then(
+    data => {
+        burgers = data;
+        onStart(burgers);
+});
+
+function onStart(burgers){
     for(let i = 0; i < burgers.length; i++ ){
         var button = document.createElement("button");
         button.textContent = burgers[i][0];

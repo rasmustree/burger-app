@@ -1,0 +1,6 @@
+This container creates the database with the 
+info of the different containts of the burgers.
+The other containers uses the bridge to conmunicate with it 
+to place orders and bring the consumaications items to the orders.
+When the order is placed the item is sent to this database and can
+then be colected by the kitchenview.
