@@ -1,29 +1,8 @@
-//import mysql from 'mysql'
-
-var mysql = require('mysql');
-
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "burger",
-    database: "MenuStoreDB"
-});
-const temp_burgers = []
-con.connect(function(err) {
-    if(err) throw err;
-    con.query("SELCT * FROM burgers", function(err, result, fields) {
-        if(err) throw err;
-        temp_burgers = result;
-    });
-});
-
-
-
-// temp array (kept incase shit hits the fan)
-//const burgers = [
-//    ["Cheeseburgare", "Bröd", "Kött", "Ost", "Sallad", "Ketchup"],
-//    ["Kycklingburgare", "Bröd", "Kyckling", "Ost", "Sallad", "Ketchup"]
-//]
+//temp array (kept incase shit hits the fan)
+const burgers = [
+    ["Cheeseburgare", "Bröd", "Kött", "Ost", "Sallad", "Ketchup"],
+    ["Kycklingburgare", "Bröd", "Kyckling", "Ost", "Sallad", "Ketchup"]
+]
 const optionsContainer = document.getElementById("options");
 const ingredientsContainer = document.getElementById("ingredients");
 const orderButtonContainer = document.getElementById("orderButton");
