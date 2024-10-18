@@ -2,25 +2,27 @@ Rasmus Ängarp, Aldin jusufagic , Noah Andersson, Adam Saab, Daniel Ramadan
 
 https://github.com/rasmustree/burger-app
 
-Konfigurationshantering är ett sätt att hålla koll på ett stort projekt med många rörliga delar. Det går att se vem som gjort vad, var och när det gjorts.
+Configuration management is a way to keep track of a large project with many moving parts. It lets you se who has done what, where, and when.
 
-ett vanligt arbetsflöde med git är att man kopierar koden in repot, skapar en branch med git branch , klonar branchen med git clone och ändrar den lokalt. Sedan pushar man till branchen med git push och mergar branchen med main med git merge efter man gjort det man vill.
+A normal workflow for git entails copying the code in the repo, create a branch with 'git branch', clone the branch with 'clone' and change it locally. Then push it to the branch with 'git push' and finally merge to main with 'git merge'
 
-• Vad gick bra?
-servern
-sätta upp bridge mellan containers
-frontend
-kitchen view gick bra
-arbeta med github gick bra
+• What went well?
+	The server
+	setting up bridge between containers
+	frontend
+	kitchen view went well
+	working with github went well. Daniel could explain it to those who didn't know
 
-• Vad gick mindre bra?
-databasen tog extremt lång tid att bli klar och även då behövde man manuellt importera från en sql dump.
-Det tog mycket tid och var svårt att lära sig docker och composes.
+• What went less well?
+	The data base took an extreme amount amount of time to be finished, and even then we needed to manually import an sql dump file
+	Docker took a lot of time to learn and it was hard to debug.
+	
 
+• How did you solve the issues? what could you do different?
+	If we started working on the project earlier, we would've had much more time to fix theese issues
+	The database was solved through testing, removing pieces of the compose bit by bit, as well as trial and error, since nothing online helped.
 
+• What did you not manage to solve? Why not?
+	changing all constants to sql queries. Mainly due to the database being finished so late, we didn't have enough time to fix it.
+	We never ended up doing unit testing since we only got a lecture two days before the assignment was to be turned in.
 
-• Hur löste ni svårigheterna? Hade ni kunnat göra annorlunda?
-	Om vi började arbeta på projektet tidigare hade vi haft mycket mer tid att arbeta med dessa problem
-	Databasen löstes genom att testa att ta bort och ändra sak efter sak.
-• Vad lyckades ni inte lösa? Varför inte?
-	Att ändra alla constants till databas queries. främst för databasen blev klar så sen. 
