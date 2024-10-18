@@ -22,9 +22,15 @@ Got the idea for how to make some of the menu functions by doing buttons to tran
 2014-10-15
 Started making research on how to connect the containers and made and found that the bridge method probably
 would be the best for our project.
+The buttions got replaced with another method to make it easyer.
 
 2024-10-17
 Made a bridge connection between the containers by making them use the same network.
 
+<<<<<<< HEAD
 2024-10-18
 Made the documents describing the different containers and wrote in the reflections text.
+=======
+2024-10-17
+Made the documents describing the different containers and vrote in the reflecktion text.
+>>>>>>> 9989676feea33db929328b663fd8d48e24c521b4
