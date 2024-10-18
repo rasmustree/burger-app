@@ -1,0 +1,4 @@
+This container creates the ordering part of this application,
+it also creates the functions to get to the checkout.
+When you click the button "checkout" the order is sent to the data base
+by the bridge and can be retreved by the kitchen view.
