@@ -12,16 +12,26 @@ Had problem with pulling changes from GitHub. Solved it with help from the teach
 
 2024-10-07
 Had no idea how to use html, solved it by finding tutorials to follow to get the idéa of how it works.
+I used some tutorials to get un understanding of how html works.
 
 2024-10-08
-Started working on the frontend for the ordering.
+Started working on the frontend for the ordering. I did this in html by making buttions for the different burger 
+choices.
 
 2024-10-09
 Got the idea for how to make some of the menu functions by doing buttons to transition to a causticizing page.
+I did this by makeing html buttons to sepperate pages where I would make buttions or check boxes for if you whanted 
+more or less of an item ex chese.
 
 2014-10-15
 Started making research on how to connect the containers and made and found that the bridge method probably
 would be the best for our project.
+The buttions got replaced with another method to make it easyer.
 
 2024-10-17
 Made a bridge connection between the containers by making them use the same network.
+I did this by making it all the containers run on the sam network.
+
+2024-10-18
+Made the documents describing the different containers and wrote in the reflections text and tryd too sepllcheck.
+

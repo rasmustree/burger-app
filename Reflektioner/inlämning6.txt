@@ -1,0 +1,9 @@
+Era erfarenheter om att skriva automatiserade enhetstester.
+• Vad gick bra?
+	Inget gick bra, vi skrev inte enhetstester då ingen av oss visste vad det var och vi hade genomgång på det två dagar innan inlämning.
+• Vad gick mindre bra? 
+	Jag refererar till texten ovan
+• Hur löste ni svårigheterna? Hade ni kunnat göra annorlunda? 
+	Vi försökte lösa det med att testa manuellt istället. Vad vi hade kunnat göra annorlunda är kanske att fråga om att vi har föreläsning på det tidigare.
+• Vad lyckades ni inte lösa? Varför inte?
+	Jag refererar till texterna ovan

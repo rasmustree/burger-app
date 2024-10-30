@@ -17,7 +17,7 @@ RUN npm ci --omit=dev
 COPY . .
 
 # Expose the port that server.js will listen on (port 3000)
-EXPOSE 3000
+EXPOSE 8080
 
 # Temporarily switch to root to install curl
 USER root

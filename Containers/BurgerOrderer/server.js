@@ -1,6 +1,6 @@
 const express = require('express'); //import express
 const app = express(); //skapa instans av express
-const PORT = 3000;
+const PORT = 8080;
 const path = require('path');
 const axios = require('axios');
 const cors = require('cors');
@@ -33,6 +33,7 @@ app.get('/', (req, res) => {
 app.get('/burgers', (req, res) =>{
     res.json(burgers);
 })
+
 // Route for items
 app.get('/items', (req, res) => {
     const filePath = path.join(__dirname, 'frontend_objects.html');
@@ -48,16 +49,25 @@ app.get('/checkout/', (req, res) => {
     res.sendFile(filePath);
 });
 
+app.get('/checkout/ingredients/:name', (req, res) => {
+    const burgerName = req.params.name
+    const ingredients = [];
+
+    for(let i = 0; i < burgers.length; i++){
+        if(burgers[i][0] === burgerName){
+            for(let j = 1; j < burgers[i].length; j++){
+                ingredients.push(burgers[i][j]);
+            }
+            return res.json({ingredients});
+        }
+    }
+    
+})
+
 // Route for order confirmation and sending to kitchen view
 app.post('/checkout/confirm', (req, res) => {
     const order = req.body;
     console.log('Order confirmed, sending to kitchen view:', order);
-
-    // Include orderId when forwarding the order
-    const orderData = {
-        orderId: order.orderId,
-        items: order.items
-    };
 
     // Forward the order to the kitchen view
     axios.post('http://kitchenview:8078/order', orderData)
