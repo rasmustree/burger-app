@@ -14,5 +14,8 @@
     "cors": "^2.8.5",
     "express": "^4.21.1"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "whatwg-fetch": "^3.6.20"
+  }
 }

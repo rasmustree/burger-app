@@ -2,6 +2,7 @@
  * @jest-environment jsdom
  */
 
+require('whatwg-fetch');
 const Frontend_operations = require('./Frontend_operations')
 
 test("Seeing if items are added", () => {
