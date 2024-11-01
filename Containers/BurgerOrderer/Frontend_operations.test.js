@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 const Frontend_operations = require('./Frontend_operations')
 
 test("Seeing if items are added", () => {
