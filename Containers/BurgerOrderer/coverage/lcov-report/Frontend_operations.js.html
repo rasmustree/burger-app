@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">13.63% </span>
+                <span class="strong">27.27% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/44</span>
+                <span class='fraction'>12/44</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">16.66% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>1/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">16.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>1/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">15% </span>
+                <span class="strong">27.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/40</span>
+                <span class='fraction'>11/40</span>
             </div>
         
             
@@ -135,7 +135,9 @@
 <a name='L70'></a><a href='#L70'>70</a>
 <a name='L71'></a><a href='#L71'>71</a>
 <a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -172,7 +174,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -192,20 +193,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
 const optionsContainer = document.getElementById("options");
@@ -223,26 +227,25 @@ fetch('/burgers').then(
 <span class="cstat-no" title="statement not covered" >        onStart(burgers);</span>
 });
 &nbsp;
-function <span class="fstat-no" title="function not covered" >onStart(</span>burgers){
+function <span class="fstat-no" title="function not covered" >onStart(</span>burgers){ //Create buttons per burger
 <span class="cstat-no" title="statement not covered" >    for(let i = <span class="cstat-no" title="statement not covered" >0;</span> i &lt; burgers.length; i++ ){</span>
         var button = <span class="cstat-no" title="statement not covered" >document.createElement("button");</span>
 <span class="cstat-no" title="statement not covered" >        button.textContent = burgers[i][0];</span>
 <span class="cstat-no" title="statement not covered" >        button.addEventListener("click", onItemButtonClick);</span>
 <span class="cstat-no" title="statement not covered" >        optionsContainer.appendChild(button);</span>
     }
-    var orderButton = <span class="cstat-no" title="statement not covered" >document.createElement("button");</span>
+    var orderButton = <span class="cstat-no" title="statement not covered" >document.createElement("button");</span> //Create button that adds to order (no funct yet)
 <span class="cstat-no" title="statement not covered" >    orderButton.textContent = "Add To Order";</span>
 <span class="cstat-no" title="statement not covered" >    orderButton.addEventListener("click", onOrderButtonClick);</span>
 <span class="cstat-no" title="statement not covered" >    orderButtonContainer.appendChild(orderButton);</span>
     
-    var checkoutButton = <span class="cstat-no" title="statement not covered" >document.createElement("button");</span>
+    var checkoutButton = <span class="cstat-no" title="statement not covered" >document.createElement("button");</span> //Create checkout button
 <span class="cstat-no" title="statement not covered" >    checkoutButton.textContent = "Checkout";</span>
 <span class="cstat-no" title="statement not covered" >    checkoutButton.addEventListener("click", onCheckout);</span>
 <span class="cstat-no" title="statement not covered" >    orderButtonContainer.appendChild(checkoutButton);</span>
 }
 &nbsp;
 function <span class="fstat-no" title="function not covered" >onItemButtonClick(</span>e){
-<span class="cstat-no" title="statement not covered" >    console.log(e.target.textContent + " has been clicked!");</span>
     var ingredientsText = <span class="cstat-no" title="statement not covered" >document.createElement("p");</span>
     let existingParagraph = <span class="cstat-no" title="statement not covered" >ingredientsContainer.querySelector("p");</span>
 &nbsp;
@@ -263,12 +266,12 @@ function <span class="fstat-no" title="function not covered" >onItemButtonClick(
 <span class="cstat-no" title="statement not covered" >    ingredientsContainer.appendChild(ingredientsText);</span>
 }
 &nbsp;
-function <span class="fstat-no" title="function not covered" >onOrderButtonClick(</span>){
-<span class="cstat-no" title="statement not covered" >    if(selectedBurger != ""){</span>
-<span class="cstat-no" title="statement not covered" >        order.push(selectedBurger);</span>
+function onOrderButtonClick(){ //Functionality to add to order button, pushes order to kitchenview
+    <span class="missing-if-branch" title="else path not taken" >E</span>if(selectedBurger != ""){
+        order.push(selectedBurger);
     }
-<span class="cstat-no" title="statement not covered" >    for(let i = <span class="cstat-no" title="statement not covered" >0;</span> i &lt; order.length; i++){</span>
-<span class="cstat-no" title="statement not covered" >        console.log(order[i]);</span>
+    for(let i = 0; i &lt; order.length; i++){ //Logs what you ordered
+        console.log(order[i]);
     }
 }
 &nbsp;
@@ -279,14 +282,17 @@ function <span class="fstat-no" title="function not covered" >onCheckout(</span>
     // Navigate to the checkout page
 <span class="cstat-no" title="statement not covered" >    window.location.href = '/checkout.html';</span>
 }
-&nbsp;</pre></td></tr></table></pre>
+&nbsp;
+module.exports = {
+    onOrderButtonClick
+};</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-11-01T14:40:34.655Z
+                at 2024-11-06T09:34:14.351Z
             </div>
         <script src="prettify.js"></script>
         <script>

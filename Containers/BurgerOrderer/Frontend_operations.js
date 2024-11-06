@@ -69,3 +69,7 @@ function onCheckout() {
     // Navigate to the checkout page
     window.location.href = '/checkout.html';
 }
+
+module.exports = {
+    onOrderButtonClick
+};
