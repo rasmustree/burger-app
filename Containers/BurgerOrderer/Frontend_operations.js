@@ -1,3 +1,4 @@
+
 const optionsContainer = document.getElementById("options");
 const ingredientsContainer = document.getElementById("ingredients");
 const orderButtonContainer = document.getElementById("orderButton");
@@ -13,26 +14,25 @@ fetch('/burgers').then(
         onStart(burgers);
 });
 
-function onStart(burgers){
+function onStart(burgers){ //Create buttons per burger
     for(let i = 0; i < burgers.length; i++ ){
         var button = document.createElement("button");
         button.textContent = burgers[i][0];
         button.addEventListener("click", onItemButtonClick);
         optionsContainer.appendChild(button);
     }
-    var orderButton = document.createElement("button");
+    var orderButton = document.createElement("button"); //Create button that adds to order (no funct yet)
     orderButton.textContent = "Add To Order";
     orderButton.addEventListener("click", onOrderButtonClick);
     orderButtonContainer.appendChild(orderButton);
     
-    var checkoutButton = document.createElement("button");
+    var checkoutButton = document.createElement("button"); //Create checkout button
     checkoutButton.textContent = "Checkout";
     checkoutButton.addEventListener("click", onCheckout);
     orderButtonContainer.appendChild(checkoutButton);
 }
 
 function onItemButtonClick(e){
-    console.log(e.target.textContent + " has been clicked!");
     var ingredientsText = document.createElement("p");
     let existingParagraph = ingredientsContainer.querySelector("p");
 
@@ -53,11 +53,11 @@ function onItemButtonClick(e){
     ingredientsContainer.appendChild(ingredientsText);
 }
 
-function onOrderButtonClick(){
+function onOrderButtonClick(){ //Functionality to add to order button, pushes order to kitchenview
     if(selectedBurger != ""){
         order.push(selectedBurger);
     }
-    for(let i = 0; i < order.length; i++){
+    for(let i = 0; i < order.length; i++){ //Logs what you ordered
         console.log(order[i]);
     }
 }
@@ -69,3 +69,7 @@ function onCheckout() {
     // Navigate to the checkout page
     window.location.href = '/checkout.html';
 }
+
+module.exports = {
+    onOrderButtonClick
+};

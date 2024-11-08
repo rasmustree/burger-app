@@ -67,3 +67,7 @@ https://stackoverflow.com/questions/53963653/unexpected-identifier-axios-import-
 18-10-24
 --------
 Today is the last day until the deadline. We are tying upp loose ends and finishing / polishing the project. I think the project went pretty well. 
+--------
+01-11-24
+--------
+Added a JSDOM header for JEST and used the package https://www.npmjs.com/package/whatwg-fetch with the command npm install --save-dev whatwg-fetch so jest doesnt throw out an error when "fetch" is included. Added a few comments to document the code. Also added a script which shows what environemnt you're in for debugging purposes. Had problems setting it to JS-Dom before. 
