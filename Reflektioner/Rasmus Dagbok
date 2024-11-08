@@ -93,3 +93,16 @@ for this project.
 purpose of today: swapping all constants with sql queries.
 as I was working in Frontend_Operations.js I debugged by doing ctrl + shift + i in the website, and I got an error that said import declarations may only appear at top level of a module
 presumably because Frontend_Operations.js is not treated as a module. After some searching, I didn't find out why. Since I couldn't import mysql, I couldn't replace the constants with queries
+
+2024-11-01:
+While attempting to add unit tests, I got the issue "ReferenceError: document is not defined". When checking with the group, Daniel managed to fix the issue. However afterwards I
+got "ReferenceError: fetch is not defined" when unit testing the function. This is likely a configuration issue.
+
+2024-11-06
+while continuing to work on the issue mentioned previously. I eventually found out you need to set an export in the module you are importing like the following:
+
+module.exports = {
+    onOrderButtonClick
+};
+
+With this method I didn't need whatwg fetch or any other extra modules.
